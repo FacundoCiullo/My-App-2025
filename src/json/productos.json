@@ -1,0 +1,257 @@
+[
+{
+    "id": 1,
+    "titulo": "Abrigo 01",
+    "descripcion": "",
+    "imagen": "/img/abrigos/01.jpg",
+    "categoria": "Abrigos",
+    "precio": 6000,
+    "stock": 10
+},
+{
+    "id": 2,
+    "titulo": "Abrigo 02",
+    "descripcion": "",
+    "imagen": "/img/abrigos/02.jpg",
+    "categoria": "Abrigos",
+    "precio": 6000,
+    "stock": 10
+},
+{
+    "id": 3,
+    "titulo": "Abrigo 03",
+    "imagen": "/img/abrigos/03.jpg",
+    "descripcion": "",
+    "categoria": "Abrigos",
+    "precio": 6000,
+    "stock": 10
+},
+{
+    "id": 4,
+    "titulo": "Abrigo 04",
+    "imagen": "/img/abrigos/04.jpg",
+    "descripcion": "",
+    "categoria": "Abrigos",
+    "precio": 6000,
+    "stock": 10
+},
+{
+    "id": 5,
+    "titulo": "Abrigo 05",
+    "imagen": "/img/abrigos/05.jpg",
+    "descripcion": "",
+    "categoria": "Abrigos",
+    "precio": 6000,
+    "stock": 10
+},
+{
+    "id": 11,
+    "titulo": "Remeras 01",
+    "imagen": "/img/remeras/01.jpg",
+    "descripcion": "",
+    "categoria": "Remeras",
+    "precio": 2000,
+    "stock": 15
+},
+{
+    "id": 12,
+    "titulo": "Remeras 02",
+    "imagen": "/img/remeras/02.jpg",
+    "descripcion": "",
+    "categoria": "Remeras",
+    "precio": 2000,
+    "stock": 15
+},
+{
+    "id": 13,
+    "titulo": "Remeras 03",
+    "imagen": "/img/remeras/03.jpg",
+    "descripcion": "",
+    "categoria": "Remeras",
+    "precio": 2000,
+    "stock": 15
+},
+{
+    "id": 14,
+    "titulo": "Remeras 04",
+    "imagen": "/img/remeras/04.jpg",
+    "descripcion": "",
+    "categoria": "Remeras",
+    "precio": 2000,
+    "stock": 15
+},
+{
+    "id": 15,
+    "titulo": "Remeras 05",
+    "imagen": "/img/remeras/05.jpg",
+    "descripcion": "",
+    "categoria": "Remeras",
+    "precio": 2000,
+    "stock": 15
+},
+{
+    "id": 16,
+    "titulo": "Remeras 06",
+    "imagen": "/img/remeras/06.jpg",
+    "descripcion": "",
+    "categoria": "Remeras",
+    "precio": 2000,
+    "stock": 15
+},
+{
+    "id": 17,
+    "titulo": "Remeras 07",
+    "imagen": "/img/remeras/07.jpg",
+    "categoria": "Remeras",
+    "precio": 2000,
+    "stock": 15
+},
+{
+    "id": 18,
+    "titulo": "Remeras 08",
+    "imagen": "/img/remeras/08.jpg",
+    "categoria": "Remeras",
+    "precio": 2000,
+    "stock": 15
+},
+{
+    "id": 21,
+    "titulo": "Pantalón 01",
+    "imagen": "/img/pantalones/01.jpg",
+    "categoria": "Pantalon",
+    "precio": 3000,
+    "stock": 10
+},
+{
+    "id": 22,
+    "titulo": "Pantalón 02",
+    "imagen": "/img/pantalones/02.jpg",
+    "categoria": "Pantalon",
+    "precio": 3000,
+    "stock": 10
+},
+{
+    "id": 23,
+    "titulo": "Pantalón 03",
+    "imagen": "/img/pantalones/03.jpg",
+    "categoria": "Pantalon",
+    "precio": 3000,
+    "stock": 10
+},
+{
+    "id": 24,
+    "titulo": "Pantalón 04",
+    "imagen": "/img/pantalones/04.jpg",
+    "categoria": "Pantalon",
+    "precio": 3000,
+    "stock": 10
+},
+{
+    "id": 25,
+    "titulo": "Pantalón 05",
+    "imagen": "/img/pantalones/05.jpg",
+    "descripcion": "",
+    "categoria": "Pantalon",
+    "precio": 3000,
+    "stock": 10
+},
+{
+    "id": 31,
+    "titulo": "Zapatillas 01",
+    "imagen": "/img/zapatillas/01.jpg",
+    "descripcion": "",
+    "categoria": "Zapatillas",
+    "precio": 20.000,
+    "stock": 10
+},
+{
+    "id": 32,
+    "titulo": "Zapatillas 02",
+    "imagen": "/img/zapatillas/02.jpg",
+    "descripcion": "",
+    "categoria": "Zapatillas",
+    "precio": 20.000,
+    "stock": 10
+},
+{
+    "id": 33,
+    "titulo": "Zapatillas 03",
+    "imagen": "/img/zapatillas/03.jpg",
+    "descripcion": "",
+    "categoria": "Zapatillas",
+    "precio": 20.000,
+    "stock": 10
+},
+{
+    "id": 34,
+    "titulo": "Zapatillas 04",
+    "imagen": "/img/zapatillas/04.jpg",
+    "descripcion": "",
+    "categoria": "Zapatillas",
+    "precio": 20.000,
+    "stock": 10
+},
+{
+    "id": 35,
+    "titulo": "Zapatillas 05",
+    "imagen": "/img/zapatillas/05.jpg",
+    "descripcion": "",
+    "categoria": "Zapatillas",
+    "precio": 20.000,
+    "stock": 10
+},
+{
+    "id": 36,
+    "titulo": "Zapatillas 06",
+    "imagen": "/img/zapatillas/06.jpg",
+    "descripcion": "",
+    "categoria": "Zapatillas",
+    "precio": 20.000,
+    "stock": 10
+},
+{
+    "id": 37,
+    "titulo": "Zapatillas 07",
+    "imagen": "/img/zapatillas/07.jpg",
+    "descripcion": "",
+    "categoria": "Zapatillas",
+    "precio": 20.000,
+    "stock": 10
+},
+{
+    "id": 38,
+    "titulo": "Zapatillas 08",
+    "imagen": "/img/zapatillas/08.jpg",
+    "descripcion": "",
+    "categoria": "Zapatillas",
+    "precio": 20.000,
+    "stock": 10
+},
+{
+    "id": 39,
+    "titulo": "Zapatillas 09",
+    "imagen": "/img/zapatillas/09.jpg",
+    "descripcion": "",
+    "categoria": "Zapatillas",
+    "precio": 20.000,
+    "stock": 10
+},
+{
+    "id": 40,
+    "titulo": "Zapatillas 10",
+    "imagen": "/img/zapatillas/10.jpg",
+    "descripcion": "",
+    "categoria": "Zapatillas",
+    "precio": 20.000,
+    "stock": 10
+},
+{
+    "id": 41,
+    "titulo": "Zapatillas 11",
+    "imagen": "/img/zapatillas/11.jpg",
+    "descripcion": "",
+    "categoria": "Zapatillas",
+    "precio": 20.000,
+    "stock": 10
+}
+]

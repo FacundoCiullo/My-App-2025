@@ -1,0 +1,264 @@
+[data-theme=light] {
+  --primary: #000000;
+  --secondary: #ff4900;
+  --bg-primary: #c1c1c1;
+  --bg-secondary: #717171;
+  --text: #000;
+}
+
+[data-theme=dark] {
+  --primary: #ff4900;
+  --secondary: #c1c1c1;
+  --bg-primary: #4b4b4b;
+  --bg-secondary: #c1c1c1;
+  --text: #c5c5c5;
+}
+
+:root {
+  --clr-black: #0a0a0a;
+  --clr-dark: #282828;
+  --clr-gray-dark: #5e5e5e;
+  --clr-gray: #c5c5c5;
+  --clr-white: #ffffff;
+  --clr-red: #cd4444;
+  --clr-green:  #18a362;
+  --clr-blue: #3d71d1c1;
+}
+
+
+.App{
+  width: 100%;
+  min-height: auto;
+  background-color: var(--bg-primary);
+}
+
+main{
+  padding-top: 4rem;
+  padding-bottom: 1.5rem;
+  margin: 0 1.5rem;
+}
+
+.inicio{
+  padding-top: 6rem;
+}
+
+.nav-link:hover{
+border-radius: 10px;
+  background-color: var(--clr-gray-dark);
+}
+
+
+
+
+/*-----------CARDS------*/
+
+
+.producto-imagen{
+  border-radius: 0%;
+}
+.producto-detalles:hover{
+  box-shadow: 15px 15px 1px -8px rgb(30, 30, 30);
+
+}
+
+.producto-detalles{
+  background-color: var(--bg-secondary);
+}
+
+
+
+/*----------------------switch*/
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--clr-gray);
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: var(--clr-gray-dark);
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: var(--clr-black);
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+
+
+
+/*categorias*/
+
+.card-category {
+  margin: 3rem auto; /* Establecer el margen superior e inferior y centrar los lados izquierdo y derecho */
+  max-width: 60%;
+  width: auto;
+  height: 25rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 16px;
+  grid-row-gap: 16px;
+}
+
+@media screen and (max-width: 720px) {
+  .card-category {
+    max-width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+  }
+}
+
+.card-product {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  z-index: 1; /* Aseguramos que la tarjeta esté encima del fondo */
+}
+
+.card-product:hover {
+  background-size: 101%; /* Ajusta el tamaño del zoom */
+  transition: background-size 5.5s ease;
+}
+
+.card-product::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)); /* Filtro de gradiente */
+  z-index: 1;
+}
+
+.card-product .card-img-overlay {
+  display: flex;
+  justify-content: center; /* Centrado horizontal */
+  align-items: center; /* Centrado vertical */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  color: white; /* Color del texto */
+}
+
+.card-link {
+  display: block;
+}
+
+.card-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.5s ease; /* Aplicar transición de zoom */
+}
+
+.card-link:hover .card-background {
+  transform: scale(1.05); /* Ajusta el tamaño del zoom */
+}
+
+.card-product-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-product-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  transition: transform 0.5s ease; /* Agregamos la transición aquí */
+}
+
+.card-product-container:hover::before {
+  transform: scale(1.01); /* Ajusta el tamaño del zoom */
+}
+
+.col{
+  padding: 5px;
+} 
+
+.btn{
+  margin: 5px;
+}
+
+
+  @media screen and (max-width: 720px) {
+    .card-product-container {
+      max-width: 100%;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: auto;
+    }
+  }
+
+
+
+/*-----------FOOTER------*/
+
+.texto-footer {
+  display: flex;
+  justify-content: center;
+  color: var(--clr-white);
+  font-size: .75rem;
+}
+/*-----------FOOTER------*/
+
+
+/* Row*/
+@media screen and (max-width: 767px) {
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .row > * {
+    flex: 0 0 calc(50% - 0.5rem); /* Dos columnas con margen entre ellas */
+    max-width: calc(50% - 0.5rem); /* Establecer el ancho máximo al 50% con margen */
+    margin-right: 1rem; /* Margen entre los elementos */
+    margin-bottom: 1rem; /* Margen inferior entre las filas */
+  }
+}
