@@ -1,257 +1,433 @@
 [
-{
-    "id": 1,
+  {
+    "id": "001",
     "titulo": "Abrigo 01",
     "descripcion": "",
     "imagen": "/img/abrigos/01.jpg",
     "categoria": "Abrigos",
     "precio": 6000,
-    "stock": 10
-},
-{
-    "id": 2,
+    "stock": 10,
+    "talles": ["S","M","L"],
+    "colores": ["Unico"],
+    "imagenesPorColor": {
+      "Unico": ["/img/abrigos/01.jpg"]
+    }
+  },
+  {
+    "id": "002",
     "titulo": "Abrigo 02",
     "descripcion": "",
     "imagen": "/img/abrigos/02.jpg",
     "categoria": "Abrigos",
     "precio": 6000,
-    "stock": 10
-},
-{
-    "id": 3,
+    "stock": 10,
+    "talles": ["S","M","L","XL"],
+    "colores": ["Unico"],
+    "imagenesPorColor": {
+      "Unico": ["/img/abrigos/02.jpg"]
+    }
+  },
+  {
+    "id": "003",
     "titulo": "Abrigo 03",
+    "descripcion": "",
     "imagen": "/img/abrigos/03.jpg",
-    "descripcion": "",
     "categoria": "Abrigos",
     "precio": 6000,
-    "stock": 10
-},
-{
-    "id": 4,
+    "stock": 10,
+    "talles": ["S","M","L"],
+    "colores": ["Unico"],
+    "imagenesPorColor": {
+      "Unico": ["/img/abrigos/03.jpg"]
+    }
+  },
+  {
+    "id": "004",
     "titulo": "Abrigo 04",
+    "descripcion": "",
     "imagen": "/img/abrigos/04.jpg",
-    "descripcion": "",
     "categoria": "Abrigos",
     "precio": 6000,
-    "stock": 10
-},
-{
-    "id": 5,
+    "stock": 10,
+    "talles": ["M","L","XL"],
+    "colores": ["Unico"],
+    "imagenesPorColor": {
+      "Unico": ["/img/abrigos/04.jpg"]
+    }
+  },
+  {
+    "id": "005",
     "titulo": "Abrigo 05",
-    "imagen": "/img/abrigos/05.jpg",
     "descripcion": "",
+    "imagen": "/img/abrigos/05.jpg",
     "categoria": "Abrigos",
     "precio": 6000,
-    "stock": 10
-},
-{
-    "id": 11,
-    "titulo": "Remeras 01",
-    "imagen": "/img/remeras/01.jpg",
-    "descripcion": "",
+    "stock": 10,
+    "talles": ["S","M","L","XL"],
+    "colores": ["Unico"],
+    "imagenesPorColor": {
+      "Unico": ["/img/abrigos/05.jpg"]
+    }
+  },
+  {
+    "id": "006",
+    "titulo": "Remera Sport",
+    "imagen": "/img/remeras/01-azul.jpg",
+    "descripcion": "Remera de algodón",
+    "categoria": "Remeras",
+    "marca": "Nike",
+    "precio": 2000,
+    "stock": 15,
+    "talles": ["S","M","L","XL"],
+    "colores": ["Azul","Negro","Morado","Marron"],
+    "imagenesPorColor": {
+      "Azul": ["/img/remeras/01-azul.jpg"],
+      "Negro": ["/img/remeras/01-negro.jpg"],
+      "Morado": ["/img/remeras/01-morado.jpg"],
+      "Marron": ["/img/remeras/01-marron.jpg"]
+    }
+  },
+  {
+    "id": "007",
+    "titulo": "Remera Lisa",
+    "imagen": "/img/remeras/02-rojo.jpg",
+    "descripcion": "Remera de algodón",
     "categoria": "Remeras",
     "precio": 2000,
-    "stock": 15
-},
-{
-    "id": 12,
-    "titulo": "Remeras 02",
-    "imagen": "/img/remeras/02.jpg",
-    "descripcion": "",
-    "categoria": "Remeras",
-    "precio": 2000,
-    "stock": 15
-},
-{
-    "id": 13,
-    "titulo": "Remeras 03",
+    "stock": 15,
+    "talles": ["S","M","L","XL"],
+    "colores": ["Rojo","Negro","Gris","Azul"],
+    "imagenesPorColor": {
+      "Rojo": ["/img/remeras/02-rojo.jpg"],
+      "Negro": ["/img/remeras/02-negro.jpg"],
+      "Gris": ["/img/remeras/02-gris.jpg"],
+      "Azul": ["/img/remeras/02-azul.jpg"]
+    }
+  },
+  {
+    "id": "008",
+    "titulo": "Remera Estampada",
     "imagen": "/img/remeras/03.jpg",
-    "descripcion": "",
+    "descripcion": "Remera de algodón",
     "categoria": "Remeras",
     "precio": 2000,
-    "stock": 15
-},
-{
-    "id": 14,
-    "titulo": "Remeras 04",
+    "stock": 15,
+    "talles": ["S","M","L","XL"],
+    "colores": ["Gris"],
+    "imagenesPorColor": {
+      "Gris": ["/img/remeras/03.jpg"]
+    }
+  },
+  {
+    "id": "009",
+    "titulo": "Remera Estampada",
+    "precio": 2000,
+    "descripcion": "Remera de algodón",
+    "categoria": "Remeras",
+    "talles": ["S","M","L","XL"],
+    "colores": ["Blanco"],
+    "stock": 15,
     "imagen": "/img/remeras/04.jpg",
-    "descripcion": "",
-    "categoria": "Remeras",
-    "precio": 2000,
-    "stock": 15
-},
-{
-    "id": 15,
+    "imagenesPorColor": {
+      "Blanco": ["/img/remeras/04.jpg"]
+    }
+  },
+  {
+    "id": "010",
     "titulo": "Remeras 05",
-    "imagen": "/img/remeras/05.jpg",
+    "imagen": "/img/remeras/05-negro.jpg",
     "descripcion": "",
     "categoria": "Remeras",
     "precio": 2000,
-    "stock": 15
-},
-{
-    "id": 16,
+    "stock": 15,
+    "talles": ["S","M","L","XL"],
+    "colores": ["Negro","Gris"],
+    "imagenesPorColor": {
+      "Negro": ["/img/remeras/05-negro.jpg"],
+      "Gris": ["/img/remeras/05-gris.jpg"]
+    }
+  },
+  {
+    "id": "011",
     "titulo": "Remeras 06",
-    "imagen": "/img/remeras/06.jpg",
+    "imagen": "/img/remeras/06-verde.jpg",
     "descripcion": "",
     "categoria": "Remeras",
     "precio": 2000,
-    "stock": 15
-},
-{
-    "id": 17,
+    "stock": 15,
+    "talles": ["S","M","L","XL"],
+    "colores": ["Verde","Negro"],
+    "imagenesPorColor": {
+      "Verde": ["/img/remeras/06-verde.jpg"],
+      "Negro": ["/img/remeras/06-negro.jpg"]
+    }
+  },
+  {
+    "id": "012",
     "titulo": "Remeras 07",
-    "imagen": "/img/remeras/07.jpg",
+    "imagen": "/img/remeras/07-celeste.jpg",
+    "descripcion": "",
     "categoria": "Remeras",
     "precio": 2000,
-    "stock": 15
-},
-{
-    "id": 18,
+    "stock": 15,
+    "talles": ["S","M","L","XL"],
+    "colores": ["Celeste"],
+    "imagenesPorColor": {
+      "Celeste": ["/img/remeras/07-celeste.jpg"]
+    }
+  },
+  {
+    "id": "013",
     "titulo": "Remeras 08",
-    "imagen": "/img/remeras/08.jpg",
+    "imagen": "/img/remeras/08-rosa.jpg",
+    "descripcion": "",
     "categoria": "Remeras",
     "precio": 2000,
-    "stock": 15
-},
-{
-    "id": 21,
+    "stock": 15,
+    "talles": ["S","M","L","XL"],
+    "colores": ["Rosa"],
+    "imagenesPorColor": {
+      "Rosa": ["/img/remeras/08-rosa.jpg"]
+    }
+  },
+  {
+    "id": "014",
     "titulo": "Pantalón 01",
     "imagen": "/img/pantalones/01.jpg",
     "categoria": "Pantalon",
     "precio": 3000,
-    "stock": 10
-},
-{
-    "id": 22,
+    "stock": 10,
+    "talles": ["38","40","42","44"],
+    "colores": ["Clasico","Oscuro","Claro"],
+    "imagenesPorColor": {
+      "Clasico": ["/img/pantalones/01.jpg"],
+      "Oscuro": ["/img/pantalones/01-oscuro.jpg"],
+      "Claro": ["/img/pantalones/01-claro.jpg"]
+    }
+  },
+  {
+    "id": "015",
     "titulo": "Pantalón 02",
     "imagen": "/img/pantalones/02.jpg",
     "categoria": "Pantalon",
     "precio": 3000,
-    "stock": 10
-},
-{
-    "id": 23,
+    "stock": 10,
+    "talles": ["38","40","42","44"],
+    "colores": ["Clasico","Oscuro","Claro"],
+    "imagenesPorColor": {
+      "Clasico": ["/img/pantalones/02.jpg"],
+      "Oscuro": ["/img/pantalones/02-oscuro.jpg"],
+      "Claro": ["/img/pantalones/02-claro.jpg"]
+    }
+  },
+    {
+    "id": "016",
     "titulo": "Pantalón 03",
     "imagen": "/img/pantalones/03.jpg",
     "categoria": "Pantalon",
     "precio": 3000,
-    "stock": 10
-},
-{
-    "id": 24,
+    "stock": 10,
+    "talles": ["38","40","42","44"],
+    "colores": ["Clasico","Oscuro","Claro"],
+    "imagenesPorColor": {
+      "Clasico": ["/img/pantalones/03.jpg"],
+      "Oscuro": ["/img/pantalones/03-oscuro.jpg"],
+      "Claro": ["/img/pantalones/03-claro.jpg"]
+    }
+  },
+  {
+    "id": "017",
     "titulo": "Pantalón 04",
     "imagen": "/img/pantalones/04.jpg",
     "categoria": "Pantalon",
     "precio": 3000,
-    "stock": 10
-},
-{
-    "id": 25,
+    "stock": 10,
+    "talles": ["38","40","42","44"],
+    "colores": ["Clasico","Oscuro","Claro"],
+    "imagenesPorColor": {
+      "Clasico": ["/img/pantalones/04.jpg"],
+      "Oscuro": ["/img/pantalones/04-oscuro.jpg"],
+      "Claro": ["/img/pantalones/04-claro.jpg"]
+    }
+  },
+  {
+    "id": "018",
     "titulo": "Pantalón 05",
     "imagen": "/img/pantalones/05.jpg",
-    "descripcion": "",
     "categoria": "Pantalon",
     "precio": 3000,
-    "stock": 10
-},
-{
-    "id": 31,
+    "stock": 10,
+    "talles": ["38","40","42","44"],
+    "colores": ["Clasico","Oscuro","Claro"],
+    "imagenesPorColor": {
+      "Clasico": ["/img/pantalones/05.jpg"],
+      "Oscuro": ["/img/pantalones/05-oscuro.jpg"],
+      "Claro": ["/img/pantalones/05-claro.jpg"]
+    }
+  },
+  {
+    "id": "019",
     "titulo": "Zapatillas 01",
     "imagen": "/img/zapatillas/01.jpg",
     "descripcion": "",
     "categoria": "Zapatillas",
-    "precio": 20.000,
-    "stock": 10
-},
-{
-    "id": 32,
+    "precio": 20000,
+    "stock": 10,
+    "talles": ["38","40","42","44"],
+    "colores": ["Original","Alternativo"],
+    "imagenesPorColor": {
+      "Original": ["/img/zapatillas/01.jpg"],
+      "Alternativo": ["/img/zapatillas/01-alt.jpg"]
+    }
+  },
+  {
+    "id": "020",
     "titulo": "Zapatillas 02",
     "imagen": "/img/zapatillas/02.jpg",
     "descripcion": "",
     "categoria": "Zapatillas",
-    "precio": 20.000,
-    "stock": 10
-},
-{
-    "id": 33,
+    "precio": 20000,
+    "stock": 10,
+    "talles": ["38","40","42","44"],
+    "colores": ["Original","Alternativo"],
+    "imagenesPorColor": {
+      "Original": ["/img/zapatillas/02.jpg"],
+      "Alternativo": ["/img/zapatillas/02-alt.jpg"]
+    }
+  },
+  {
+    "id": "021",
     "titulo": "Zapatillas 03",
     "imagen": "/img/zapatillas/03.jpg",
     "descripcion": "",
     "categoria": "Zapatillas",
-    "precio": 20.000,
-    "stock": 10
-},
-{
-    "id": 34,
+    "precio": 20000,
+    "stock": 10,
+    "talles": ["38","40","42","44"],
+    "colores": ["Original","Alternativo"],
+    "imagenesPorColor": {
+      "Original": ["/img/zapatillas/03.jpg"],
+      "Alternativo": ["/img/zapatillas/03-alt.jpg"]
+    }
+  },
+  {
+    "id": "022",
     "titulo": "Zapatillas 04",
     "imagen": "/img/zapatillas/04.jpg",
     "descripcion": "",
     "categoria": "Zapatillas",
-    "precio": 20.000,
-    "stock": 10
-},
-{
-    "id": 35,
+    "precio": 20000,
+    "stock": 10,
+    "talles": ["38","40","42","44"],
+    "colores": ["Original","Alternativo"],
+    "imagenesPorColor": {
+      "Original": ["/img/zapatillas/04.jpg"],
+      "Alternativo": ["/img/zapatillas/04-alt.jpg"]
+    }
+  },
+  {
+    "id": "023",
     "titulo": "Zapatillas 05",
     "imagen": "/img/zapatillas/05.jpg",
     "descripcion": "",
     "categoria": "Zapatillas",
-    "precio": 20.000,
-    "stock": 10
-},
-{
-    "id": 36,
+    "precio": 20000,
+    "stock": 10,
+    "talles": ["38","40","42","44"],
+    "colores": ["Original","Alternativo"],
+    "imagenesPorColor": {
+      "Original": ["/img/zapatillas/05.jpg"],
+      "Alternativo": ["/img/zapatillas/05-alt.jpg"]
+    }
+  },
+  {
+    "id": "024",
     "titulo": "Zapatillas 06",
     "imagen": "/img/zapatillas/06.jpg",
     "descripcion": "",
     "categoria": "Zapatillas",
-    "precio": 20.000,
-    "stock": 10
-},
-{
-    "id": 37,
+    "precio": 20000,
+    "stock": 10,
+    "talles": ["38","40","42","44"],
+    "colores": ["Original","Alternativo"],
+    "imagenesPorColor": {
+      "Original": ["/img/zapatillas/06.jpg"],
+      "Alternativo": ["/img/zapatillas/06-alt.jpg"]
+    }
+  },
+  {
+    "id": "025",
     "titulo": "Zapatillas 07",
     "imagen": "/img/zapatillas/07.jpg",
     "descripcion": "",
     "categoria": "Zapatillas",
-    "precio": 20.000,
-    "stock": 10
-},
-{
-    "id": 38,
+    "precio": 20000,
+    "stock": 10,
+    "talles": ["38","40","42","44"],
+    "colores": ["Original","Alternativo"],
+    "imagenesPorColor": {
+      "Original": ["/img/zapatillas/07.jpg"],
+      "Alternativo": ["/img/zapatillas/07-alt.jpg"]
+    }
+  },
+  {
+    "id": "026",
     "titulo": "Zapatillas 08",
     "imagen": "/img/zapatillas/08.jpg",
     "descripcion": "",
     "categoria": "Zapatillas",
-    "precio": 20.000,
-    "stock": 10
-},
-{
-    "id": 39,
+    "precio": 20000,
+    "stock": 10,
+    "talles": ["38","40","42","44"],
+    "colores": ["Original","Alternativo"],
+    "imagenesPorColor": {
+      "Original": ["/img/zapatillas/08.jpg"],
+      "Alternativo": ["/img/zapatillas/08-alt.jpg"]
+    }
+  },
+  {
+    "id": "027",
     "titulo": "Zapatillas 09",
     "imagen": "/img/zapatillas/09.jpg",
     "descripcion": "",
     "categoria": "Zapatillas",
-    "precio": 20.000,
-    "stock": 10
-},
-{
-    "id": 40,
+    "precio": 20000,
+    "stock": 10,
+    "talles": ["38","40","42","44"],
+    "colores": ["Original","Alternativo"],
+    "imagenesPorColor": {
+      "Original": ["/img/zapatillas/09.jpg"],
+      "Alternativo": ["/img/zapatillas/09-alt.jpg"]
+    }
+  },
+  {
+    "id": "028",
     "titulo": "Zapatillas 10",
     "imagen": "/img/zapatillas/10.jpg",
     "descripcion": "",
     "categoria": "Zapatillas",
-    "precio": 20.000,
-    "stock": 10
-},
-{
-    "id": 41,
+    "precio": 20000,
+    "stock": 10,
+    "talles": ["38","40","42","44"],
+    "colores": ["Original","Alternativo"],
+    "imagenesPorColor": {
+      "Original": ["/img/zapatillas/10.jpg"],
+      "Alternativo": ["/img/zapatillas/10-alt.jpg"]
+    }
+  },
+  {
+    "id": "029",
     "titulo": "Zapatillas 11",
     "imagen": "/img/zapatillas/11.jpg",
     "descripcion": "",
     "categoria": "Zapatillas",
-    "precio": 20.000,
-    "stock": 10
-}
+    "precio": 20000,
+    "stock": 10,
+    "talles": ["38","40","42","44"],
+    "colores": ["Original","Alternativo"],
+    "imagenesPorColor": {
+      "Original": ["/img/zapatillas/11.jpg"],
+      "Alternativo": ["/img/zapatillas/11-alt.jpg"]
+    }
+  }
 ]

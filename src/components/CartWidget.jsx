@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import Badge from 'react-bootstrap/Badge';
 import Button from 'react-bootstrap/Button';
-import { CartContext } from "./context/CartContext";
+import { CartContext } from "../context/CartContext";
 import { useContext } from "react";
 
 

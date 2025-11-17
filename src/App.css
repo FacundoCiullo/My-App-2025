@@ -33,20 +33,14 @@
 }
 
 main{
-  padding-top: 4rem;
+  padding-top: 2rem;
   padding-bottom: 1.5rem;
   margin: 0 1.5rem;
 }
 
 .inicio{
-  padding-top: 6rem;
+  padding-top: 0rem;
 }
-
-.nav-link:hover{
-border-radius: 10px;
-  background-color: var(--clr-gray-dark);
-}
-
 
 
 
@@ -262,3 +256,258 @@ input:checked + .slider:before {
     margin-bottom: 1rem; /* Margen inferior entre las filas */
   }
 }
+
+
+
+
+/* ===== INICIO LANDING ===== */
+
+.inicio-landing {
+  padding-top:0rem;
+  background: linear-gradient(180deg, #ffffff, #efefef);
+}
+
+/* Carrusel */
+.inicio-carousel .carousel-item {
+  transition: transform 1s ease, opacity 1s ease;
+}
+
+/* Título destacado */
+.highlight {
+  color: #0d6efd;
+}
+
+/* Beneficios */
+.benefits-section {
+  background: #f9f9f9;
+  border-top: 2px solid #eee;
+  border-bottom: 2px solid #eee;
+}
+
+/* Contacto */
+.contact-section {
+  background: linear-gradient(135deg, #212529, #343a40);
+  border-top: 4px solid #0d6efd;
+}
+
+/* Animaciones suaves */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .inicio-carousel h2 {
+    font-size: 1.8rem !important;
+  }
+  .benefits-section .col-md-3 {
+    margin-bottom: 2rem;
+  }
+}
+
+
+
+/* Testimonials */
+.testimonials-section .testimonial-card {
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+.testimonials-section .testimonial-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+/* Avatar */
+.testimonials-section .avatar {
+  font-size: 0.95rem;
+}
+
+/* Social bar tweaks */
+.social-bar a {
+  color: var(--text);
+  transition: transform 0.15s ease, color 0.15s ease;
+}
+.social-bar a:hover {
+  transform: translateY(-3px);
+  color: var(--secondary, #ff4900);
+}
+
+
+
+
+/* ============================================
+   🛍️ ITEM LIST - PRODUCT CARDS
+============================================ */
+
+.card-producto {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-producto:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* Imagen principal de la card */
+.card-producto .card-img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+/* Efecto zoom solo en cards (no en modal) */
+.card-producto:hover .card-img {
+  transform: scale(1.05);
+}
+
+/* ---- Overlay para Vista Rápida ---- */
+.quickview-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.45);
+  opacity: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  transition: opacity 0.3s ease;
+  padding-bottom: 20px;
+  border-radius: 20px;
+}
+
+.card-producto:hover .quickview-overlay {
+  opacity: 1;
+}
+
+/* ---- Botón de Vista Rápida ---- */
+.quickview-overlay button {
+  background-color: #ffffff;
+  color: #000;
+  border: none;
+  border-radius: 30px;
+  padding: 8px 20px;
+  font-weight: 500;
+  transition: all 0.25s ease;
+}
+
+.quickview-overlay button:hover {
+  background-color: #000;
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
+}
+
+
+/* ============================================
+   🪟 MODAL DE VISTA RÁPIDA (ItemQuickView)
+============================================ */
+
+.itemQuickViewModal .modal-content {
+  border-radius: 20px;
+  border: none;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+/* Imagen dentro del modal (sin hover) */
+.itemQuickViewModal img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* ---- Botones dentro del modal ---- */
+.itemQuickViewModal .btn-dark,
+.itemQuickViewModal .btn-outline-primary {
+  border-radius: 10px;
+  transition: all 0.25s ease;
+}
+
+/* Hover del botón oscuro */
+.itemQuickViewModal .btn-dark:hover {
+  background-color: #222;
+  transform: translateY(-2px);
+}
+
+/* Hover del botón contorneado */
+.itemQuickViewModal .btn-outline-primary:hover {
+  background-color: #0d6efd;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+
+
+
+
+/* 🔔 Estilo personalizado del toast principal */
+.Toastify__toast--success {
+  background-color: #222 !important;  /* Fondo oscuro elegante */
+  color: #fff !important;              /* Texto blanco */
+  border-radius: 10px !important;
+  border-left: 5px solid #0d6efd !important; /* Línea azul lateral */
+  font-weight: 500;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+}
+
+/* Botón de cierre del toast */
+.Toastify__close-button {
+  color: #ffffffcc !important;
+}
+.Toastify__close-button:hover {
+  color: #fff !important;
+}
+
+.Toastify__toast-container--top-center {
+  top: 80px !important; /* distancia desde el borde superior */
+}
+
+.itemQuickViewModal .btn-outline-dark {
+  border-radius: 20px;
+  transition: all 0.2s ease;
+}
+
+.itemQuickViewModal .btn-outline-dark:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+
+
+
+
+
+/* ==== ITEM DETAIL ==== */
+
+.carousel-item img {
+  transition: transform 0.4s ease;
+}
+
+.carousel-item img:hover {
+  transform: scale(1.03);
+}
+
+.btn-outline-dark {
+  border-radius: 20px;
+  transition: all 0.2s ease;
+}
+
+.btn-outline-dark:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.Toastify__toast {
+  cursor: pointer;
+}
+
+

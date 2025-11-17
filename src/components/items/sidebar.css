@@ -1,0 +1,48 @@
+/* Sidebar fijo */
+.sidebar-filtros {
+  position: sticky;
+  top: 80px;
+  width: 260px;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 18px;
+  max-height: 85vh;
+  overflow-y: auto;
+}
+
+/* Títulos */
+.filter-title {
+  font-size: 1rem;
+  margin-bottom: 4px;
+  font-weight: 600;
+}
+
+/* Grid 2 columnas */
+.filter-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 6px 10px;
+  margin-top: 6px;
+}
+
+/* Cada opción */
+.filter-option {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.9rem;
+}
+
+/* Checkbox más prolijos */
+.filter-option input {
+  transform: scale(1.1);
+}
+
+/* Scroll suave */
+.sidebar-filtros::-webkit-scrollbar {
+  width: 6px;
+}
+.sidebar-filtros::-webkit-scrollbar-thumb {
+  background: #cfcfcf;
+  border-radius: 10px;
+}
