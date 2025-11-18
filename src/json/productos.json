@@ -193,76 +193,66 @@
   {
     "id": "014",
     "titulo": "Pantalón 01",
-    "imagen": "/img/pantalones/01.jpg",
+    "imagen": "/img/pantalones/01-claro.jpg",
     "categoria": "Pantalon",
     "precio": 3000,
     "stock": 10,
     "talles": ["38","40","42","44"],
-    "colores": ["Clasico","Oscuro","Claro"],
+    "colores": ["Claro"],
     "imagenesPorColor": {
-      "Clasico": ["/img/pantalones/01.jpg"],
-      "Oscuro": ["/img/pantalones/01-oscuro.jpg"],
       "Claro": ["/img/pantalones/01-claro.jpg"]
     }
   },
   {
     "id": "015",
     "titulo": "Pantalón 02",
-    "imagen": "/img/pantalones/02.jpg",
+    "imagen": "/img/pantalones/02-claro.jpg",
     "categoria": "Pantalon",
     "precio": 3000,
     "stock": 10,
-    "talles": ["38","40","42","44"],
-    "colores": ["Clasico","Oscuro","Claro"],
+    "talles": ["38","40"],
+    "colores": ["Claro"],
     "imagenesPorColor": {
-      "Clasico": ["/img/pantalones/02.jpg"],
-      "Oscuro": ["/img/pantalones/02-oscuro.jpg"],
       "Claro": ["/img/pantalones/02-claro.jpg"]
     }
   },
     {
     "id": "016",
     "titulo": "Pantalón 03",
-    "imagen": "/img/pantalones/03.jpg",
+    "imagen": "/img/pantalones/03-oscuro.jpg",
     "categoria": "Pantalon",
     "precio": 3000,
     "stock": 10,
     "talles": ["38","40","42","44"],
-    "colores": ["Clasico","Oscuro","Claro"],
+    "colores": ["Oscuro"],
     "imagenesPorColor": {
-      "Clasico": ["/img/pantalones/03.jpg"],
-      "Oscuro": ["/img/pantalones/03-oscuro.jpg"],
-      "Claro": ["/img/pantalones/03-claro.jpg"]
+      "Oscuro": ["/img/pantalones/03-oscuro.jpg"]
     }
   },
   {
     "id": "017",
     "titulo": "Pantalón 04",
-    "imagen": "/img/pantalones/04.jpg",
+    "imagen": "/img/pantalones/04-oscuro.jpg",
     "categoria": "Pantalon",
     "precio": 3000,
     "stock": 10,
-    "talles": ["38","40","42","44"],
-    "colores": ["Clasico","Oscuro","Claro"],
+    "talles": ["38","42","44"],
+    "colores": ["Oscuro"],
     "imagenesPorColor": {
-      "Clasico": ["/img/pantalones/04.jpg"],
-      "Oscuro": ["/img/pantalones/04-oscuro.jpg"],
-      "Claro": ["/img/pantalones/04-claro.jpg"]
+      "Oscuro": ["/img/pantalones/04-oscuro.jpg"]
     }
   },
   {
     "id": "018",
     "titulo": "Pantalón 05",
-    "imagen": "/img/pantalones/05.jpg",
+    "imagen": "/img/pantalones/05-oscuro.jpg",
     "categoria": "Pantalon",
     "precio": 3000,
     "stock": 10,
     "talles": ["38","40","42","44"],
-    "colores": ["Clasico","Oscuro","Claro"],
+    "colores": ["Oscuro"],
     "imagenesPorColor": {
-      "Clasico": ["/img/pantalones/05.jpg"],
-      "Oscuro": ["/img/pantalones/05-oscuro.jpg"],
-      "Claro": ["/img/pantalones/05-claro.jpg"]
+      "Oscuro": ["/img/pantalones/05-oscuro.jpg"]
     }
   },
   {
@@ -270,14 +260,14 @@
     "titulo": "Zapatillas 01",
     "imagen": "/img/zapatillas/01.jpg",
     "descripcion": "",
+    "marca": "Nike",
     "categoria": "Zapatillas",
     "precio": 20000,
     "stock": 10,
     "talles": ["38","40","42","44"],
-    "colores": ["Original","Alternativo"],
+    "colores": ["Original"],
     "imagenesPorColor": {
-      "Original": ["/img/zapatillas/01.jpg"],
-      "Alternativo": ["/img/zapatillas/01-alt.jpg"]
+      "Original": ["/img/zapatillas/01.jpg"]
     }
   },
   {
@@ -285,6 +275,7 @@
     "titulo": "Zapatillas 02",
     "imagen": "/img/zapatillas/02.jpg",
     "descripcion": "",
+    "marca": "Nike",
     "categoria": "Zapatillas",
     "precio": 20000,
     "stock": 10,
@@ -298,31 +289,32 @@
   {
     "id": "021",
     "titulo": "Zapatillas 03",
-    "imagen": "/img/zapatillas/03.jpg",
+    "imagen": "/img/zapatillas/01-negro.webp",
     "descripcion": "",
+    "marca": "Adidas",
     "categoria": "Zapatillas",
     "precio": 20000,
     "stock": 10,
     "talles": ["38","40","42","44"],
     "colores": ["Original","Alternativo"],
     "imagenesPorColor": {
-      "Original": ["/img/zapatillas/03.jpg"],
-      "Alternativo": ["/img/zapatillas/03-alt.jpg"]
+      "Original": ["/img/zapatillas/01-negro.webp"],
+      "Alternativo": ["/img/zapatillas/01-verde.webp"]
     }
   },
   {
     "id": "022",
     "titulo": "Zapatillas 04",
-    "imagen": "/img/zapatillas/04.jpg",
+    "imagen": "/img/zapatillas/02-adidas-ultrarun-negro.jpg",
     "descripcion": "",
+    "marca": "Adidas",
     "categoria": "Zapatillas",
     "precio": 20000,
     "stock": 10,
     "talles": ["38","40","42","44"],
-    "colores": ["Original","Alternativo"],
+    "colores": ["Original"],
     "imagenesPorColor": {
-      "Original": ["/img/zapatillas/04.jpg"],
-      "Alternativo": ["/img/zapatillas/04-alt.jpg"]
+      "Original": ["/img/zapatillas/02-adidas-ultrarun-negro.jpg"]
     }
   },
   {
@@ -330,14 +322,14 @@
     "titulo": "Zapatillas 05",
     "imagen": "/img/zapatillas/05.jpg",
     "descripcion": "",
+    "marca": "Nike",
     "categoria": "Zapatillas",
     "precio": 20000,
     "stock": 10,
     "talles": ["38","40","42","44"],
-    "colores": ["Original","Alternativo"],
+    "colores": ["Original"],
     "imagenesPorColor": {
-      "Original": ["/img/zapatillas/05.jpg"],
-      "Alternativo": ["/img/zapatillas/05-alt.jpg"]
+      "Original": ["/img/zapatillas/05.jpg"]
     }
   },
   {
@@ -345,14 +337,14 @@
     "titulo": "Zapatillas 06",
     "imagen": "/img/zapatillas/06.jpg",
     "descripcion": "",
+    "marca": "Nike",
     "categoria": "Zapatillas",
     "precio": 20000,
     "stock": 10,
     "talles": ["38","40","42","44"],
-    "colores": ["Original","Alternativo"],
+    "colores": ["Original"],
     "imagenesPorColor": {
-      "Original": ["/img/zapatillas/06.jpg"],
-      "Alternativo": ["/img/zapatillas/06-alt.jpg"]
+      "Original": ["/img/zapatillas/06.jpg"]
     }
   },
   {
@@ -360,14 +352,14 @@
     "titulo": "Zapatillas 07",
     "imagen": "/img/zapatillas/07.jpg",
     "descripcion": "",
+    "marca": "Nike",
     "categoria": "Zapatillas",
     "precio": 20000,
     "stock": 10,
     "talles": ["38","40","42","44"],
-    "colores": ["Original","Alternativo"],
+    "colores": ["Original"],
     "imagenesPorColor": {
-      "Original": ["/img/zapatillas/07.jpg"],
-      "Alternativo": ["/img/zapatillas/07-alt.jpg"]
+      "Original": ["/img/zapatillas/07.jpg"]
     }
   },
   {
@@ -375,14 +367,14 @@
     "titulo": "Zapatillas 08",
     "imagen": "/img/zapatillas/08.jpg",
     "descripcion": "",
+    "marca": "Nike",
     "categoria": "Zapatillas",
     "precio": 20000,
     "stock": 10,
     "talles": ["38","40","42","44"],
-    "colores": ["Original","Alternativo"],
+    "colores": ["Original"],
     "imagenesPorColor": {
-      "Original": ["/img/zapatillas/08.jpg"],
-      "Alternativo": ["/img/zapatillas/08-alt.jpg"]
+      "Original": ["/img/zapatillas/08.jpg"]
     }
   },
   {
@@ -390,14 +382,14 @@
     "titulo": "Zapatillas 09",
     "imagen": "/img/zapatillas/09.jpg",
     "descripcion": "",
+    "marca": "Nike",
     "categoria": "Zapatillas",
     "precio": 20000,
     "stock": 10,
-    "talles": ["38","40","42","44"],
-    "colores": ["Original","Alternativo"],
+    "talles": ["40","42","44"],
+    "colores": ["Original"],
     "imagenesPorColor": {
-      "Original": ["/img/zapatillas/09.jpg"],
-      "Alternativo": ["/img/zapatillas/09-alt.jpg"]
+      "Original": ["/img/zapatillas/09.jpg"]
     }
   },
   {
@@ -405,14 +397,14 @@
     "titulo": "Zapatillas 10",
     "imagen": "/img/zapatillas/10.jpg",
     "descripcion": "",
+    "marca": "Nike",
     "categoria": "Zapatillas",
     "precio": 20000,
     "stock": 10,
     "talles": ["38","40","42","44"],
-    "colores": ["Original","Alternativo"],
+    "colores": ["Original"],
     "imagenesPorColor": {
-      "Original": ["/img/zapatillas/10.jpg"],
-      "Alternativo": ["/img/zapatillas/10-alt.jpg"]
+      "Original": ["/img/zapatillas/10.jpg"]
     }
   },
   {
@@ -420,14 +412,14 @@
     "titulo": "Zapatillas 11",
     "imagen": "/img/zapatillas/11.jpg",
     "descripcion": "",
+    "marca": "Nike",
     "categoria": "Zapatillas",
     "precio": 20000,
     "stock": 10,
     "talles": ["38","40","42","44"],
-    "colores": ["Original","Alternativo"],
+    "colores": ["Original"],
     "imagenesPorColor": {
-      "Original": ["/img/zapatillas/11.jpg"],
-      "Alternativo": ["/img/zapatillas/11-alt.jpg"]
+      "Original": ["/img/zapatillas/11.jpg"]
     }
   }
 ]

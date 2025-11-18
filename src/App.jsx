@@ -14,9 +14,13 @@ import { FavoritesProvider } from "./context/FavoritesContext";
 import FavoritesList from "./components/FavoritesList";
 import { AuthProvider } from "./context/AuthContext"; // ✅ import
 import AdminDashboard from "./Admin/AdminDashboard";
+import HistorialCompras from "./components/HistorialCompras";
+
 
 
 function App() {
+
+
   return (
     <div className='App'>
       <AuthProvider>
@@ -30,6 +34,7 @@ function App() {
                   <Route path="/" element={<Inicio />} />
                   <Route path="/Home" element={<Inicio />} />
                   <Route path="/Productos" element={<ItemListContainer />} />
+                  <Route path="/historial" element={<HistorialCompras />} />
                   <Route path="/favoritos" element={<FavoritesList />} />
                   <Route path="/category/:id" element={<ItemListContainer />} />
                   <Route path="/item/:id" element={<ItemDetailContainer />} />

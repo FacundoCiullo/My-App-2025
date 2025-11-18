@@ -151,7 +151,7 @@ const ItemDetail = ({ producto }) => {
           </div>
 
           {/* BOTÓN */}
-          <div className="mt-3">
+          <div className="mt-3 ">
             <Button
               variant="dark"
               className="w-100"

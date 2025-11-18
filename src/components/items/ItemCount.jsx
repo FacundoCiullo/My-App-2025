@@ -44,8 +44,8 @@ const ItemCount = ({stock, onAdd}) => {
       </div>
       <div className="row">
         <div className="col">
-          {itemAdded ? <Link to={"/cart"} className="btn btn-light">Finalizar Compra</Link> : <button type="button" className="btn btn-light" onClick={addToCart}>Agregar al Carrito</button>}
-          <Link to={"/"} className="btn btn-light">Seguir comprando</Link>
+          {itemAdded ? <Link to={"/cart"} className="btn btn-dark w-50">Finalizar Compra</Link> : <button type="button" className="btn btn-light" onClick={addToCart}>Agregar al Carrito</button>}
+          <Link to={"/Productos"} className="btn btn-light">Seguir comprando</Link>
         </div>
       </div>
     </div>        

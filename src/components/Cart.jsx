@@ -1,3 +1,4 @@
+// src/components/Cart.jsx
 import React, { useContext } from "react";
 import { CartContext } from "../context/CartContext";
 import { Link } from "react-router-dom";
@@ -53,7 +54,10 @@ const Cart = () => {
                   <td>
                     <img src={item.imagen} alt={item.titulo} width={80} />
                   </td>
-                  <td className="align-middle">{item.titulo}</td>
+
+                  <td className="align-middle">
+                    <strong>{item.marca}</strong> — {item.titulo}
+                  </td>
 
                   <td className="align-middle">
                     <div className="d-flex gap-3">
@@ -65,9 +69,11 @@ const Cart = () => {
                   <td className="align-middle">
                     {item.quantity} x ${item.precio}
                   </td>
+
                   <td className="align-middle text-center">
                     ${item.quantity * item.precio}
                   </td>
+
                   <td className="align-middle text-end">
                     <button
                       className="btn btn-light"

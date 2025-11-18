@@ -76,7 +76,7 @@ const Inicio = () => {
         <p className="text-muted fs-5">
           Descubrí la mejor moda urbana con envío rápido, calidad premium y atención personalizada.
         </p>
-        <Link to="/">
+        <Link to="/Productos">
           <Button variant="dark" size="lg" className="mt-3 shadow-sm">
             Explorar productos
           </Button>

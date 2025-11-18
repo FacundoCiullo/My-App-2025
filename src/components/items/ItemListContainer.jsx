@@ -32,9 +32,9 @@ const ItemListContainer = ({ limit }) => {
     const itemsCollection = collection(db, "items");
     const q = id ? query(itemsCollection, where("categoria", "==", id)) : itemsCollection;
 
-    getDocs(q).then(resultado => {
+    getDocs(q).then((resultado) => {
       if (resultado.size > 0) {
-        const data = resultado.docs.map(producto => ({
+        const data = resultado.docs.map((producto) => ({
           id: producto.id,
           ...producto.data(),
         }));
@@ -52,24 +52,44 @@ const ItemListContainer = ({ limit }) => {
     let final = [...items];
 
     if (filtros.categorias.length)
-      final = final.filter(item => filtros.categorias.includes(item.categoria));
+      final = final.filter((item) => filtros.categorias.includes(item.categoria));
 
     if (filtros.marcas.length)
-      final = final.filter(item => filtros.marcas.includes(item.marca));
+      final = final.filter((item) => filtros.marcas.includes(item.marca));
 
     if (filtros.talles.length)
-      final = final.filter(item =>
-        (item.talles || []).some(t => filtros.talles.includes(t))
+      final = final.filter((item) =>
+        (item.talles || []).some((t) => filtros.talles.includes(t))
       );
 
     if (filtros.colores.length)
-      final = final.filter(item =>
-        (item.colores || []).some(c => filtros.colores.includes(c))
+      final = final.filter((item) =>
+        (item.colores || []).some((c) => filtros.colores.includes(c))
       );
 
-    final = final.filter(item => item.precio <= filtros.precioMax);
+    final = final.filter((item) => item.precio <= filtros.precioMax);
 
-    setFiltered(limit ? final.slice(0, limit) : final);
+    // --- EXPANDIR POR COLOR ---
+    let productosExpandidos = [];
+
+    final.forEach((item) => {
+      // si no hay filtro de color → se usa el producto normal
+      if (!filtros.colores.length) {
+        productosExpandidos.push(item);
+      } else {
+        // si hay colores filtrados → se duplica el producto por color
+        filtros.colores.forEach((color) => {
+          if (item.colores?.includes(color)) {
+            productosExpandidos.push({
+              ...item,
+              colorForzado: color, // ← clave para Item.jsx
+            });
+          }
+        });
+      }
+    });
+
+    setFiltered(limit ? productosExpandidos.slice(0, limit) : productosExpandidos);
   }, [filtros, items, limit]);
 
   if (loading) return <Loading />;
@@ -89,10 +109,7 @@ const ItemListContainer = ({ limit }) => {
 
         {/* LISTA DE PRODUCTOS */}
         <div className="col-12 col-md-9">
-          <ItemList
-            productos={filtered}
-            colorSeleccionado={filtros.colores[0] || null}
-          />
+          <ItemList productos={filtered} />
         </div>
       </div>
     </div>

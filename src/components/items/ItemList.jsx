@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import ItemQuickView from "./ItemQuickView";
 import Item from "./Item";
 
-const ItemList = ({ productos, colorSeleccionado }) => {
+const ItemList = ({ productos }) => {
   const [showModal, setShowModal] = useState(false);
   const [selectedProduct, setSelectedProduct] = useState(null);
 
@@ -45,13 +45,13 @@ const ItemList = ({ productos, colorSeleccionado }) => {
       >
         {productos.map((producto) => (
           <motion.div
-            key={producto.id}
+            key={`${producto.id}-${producto.colorForzado || "default"}`}
             variants={itemVariants}
             className="col-10 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center"
           >
             <Item
               producto={producto}
-              colorSeleccionado={colorSeleccionado}
+              colorSeleccionado={producto.colorForzado || null}
               handleQuickView={handleQuickView}
             />
           </motion.div>
