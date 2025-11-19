@@ -1,0 +1,205 @@
+/* =========================================================
+  🎨 1) DESIGN TOKENS – Colores, tipografías, sombras, etc.
+========================================================= */
+
+/* Light / Dark themes */
+[data-theme="light"] {
+  --color-primary: #000000;
+  --color-accent: #ff4900;
+  --color-bg-primary: #c1c1c1;
+  --color-bg-secondary: #f1f1f1;
+  --color-text: #111;
+}
+
+[data-theme="dark"] {
+  --color-primary: #ff4900;
+  --color-accent: #c1c1c1;
+  --color-bg-primary: #2a2a2a;
+  --color-bg-secondary: #3a3a3a;
+  --color-text: #eaeaea;
+}
+
+/* Neutral palette + tokens globales */
+:root {
+  --black: #0a0a0a;
+  --dark: #282828;
+  --gray-300: #c5c5c5;
+  --gray-600: #717171;
+  --white: #ffffff;
+
+  --success: #18a362;
+  --danger: #cd4444;
+  --blue-soft: #3d71d1c1;
+
+  --radius-base: 1rem;
+  --transition-base: 0.3s ease;
+
+  --font-base: 'Urbanist', sans-serif;
+}
+
+/* =========================================================
+  🧱 2) BASE / RESET
+========================================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, .App {
+  font-family: var(--font-base);
+  background-color: var(--color-bg-primary);
+  color: var(--color-text);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+main {
+  padding-top: 2rem;
+  padding-bottom: 0rem;
+  margin: 0 0rem;
+}
+
+/* =========================================================
+  🧩 3) HELPERS – clases utilitarias
+========================================================= */
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.shadow-soft {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.section {
+  padding: 2rem 0;
+}
+
+.text-muted {
+  color: var(--gray-600);
+}
+
+/* =========================================================
+  🔔 4) TOASTIFY CUSTOM
+========================================================= */
+
+.Toastify__toast--success {
+  background-color: #222 !important;
+  color: #fff !important;
+  border-radius: 12px !important;
+  border-left: 5px solid #0d6efd !important;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+}
+
+/* =========================================================
+  🖼 5) MODAL – Quick View
+========================================================= */
+
+.itemQuickViewModal .modal-content {
+  border-radius: 20px;
+  border: none;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  transition: var(--transition-base);
+}
+
+.itemQuickViewModal img {
+  width: 100%;
+  border-radius: 15px;
+  object-fit: cover;
+}
+
+
+/* =========================================================
+  🏝 7) SECCIÓN INICIO / LANDING
+========================================================= */
+
+.inicio-landing {
+  padding-top: 0rem;
+  background: linear-gradient(180deg, #ffffff, #efefef);
+}
+
+/* ============================
+  HERO / CAROUSEL
+============================ */
+.inicio-carousel {
+  margin: 0 2rem;
+}
+
+.carousel-card {
+  height: 40vh;
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+}
+
+.carousel-overlay {
+  height: 100%;
+  border-radius: 20px;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.carousel-title {
+  font-size: 2.8rem;
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.9);
+}
+
+/* Títulos */
+.highlight {
+  color: #0d6efd;
+}
+
+/* ============================
+  BENEFICIOS
+============================ */
+.benefit-box {
+  padding: 1.2rem;
+}
+
+/* ============================
+  CONTACTO FINAL
+============================ */
+.contact-section {
+  background: linear-gradient(135deg, #111, #333);
+}
+
+
+
+/* Animación */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .inicio-carousel h2 {
+    font-size: 1.8rem !important;
+  }
+  .benefits-section .col-md-3 {
+    margin-bottom: 2rem;
+  }
+}
+
+/* =========================================================
+  ⭐ 8) TESTIMONIOS
+========================================================= */
+
+.testimonials-section .testimonial-card {
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.testimonials-section .testimonial-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.testimonials-section .avatar {
+  font-size: 0.95rem;
+}
+
+/* Social bar */
+
+

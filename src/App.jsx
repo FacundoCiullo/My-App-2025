@@ -1,21 +1,27 @@
-import './App.css';
-import Cart from './components/Cart';
-import Inicio from './components/Inicio';
-import Error404 from './components/Error404';
-import Footer from './components/Footer';
-import NavBar from './components/NavBar';
-import ItemDetailContainer from './components/items/ItemDetailContainer';
-import ItemListContainer from './components/items/ItemListContainer';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import CartContextProvider from './context/CartContext';
-import Checkout from './components/Checkout';
-import ThankYou from './components/ThankYou';
-import { FavoritesProvider } from "./context/FavoritesContext";
-import FavoritesList from "./components/FavoritesList";
-import { AuthProvider } from "./context/AuthContext"; // ✅ import
-import AdminDashboard from "./Admin/AdminDashboard";
-import HistorialCompras from "./components/HistorialCompras";
+import './style/App.css';
 
+import Inicio from './pages/Inicio';
+import Error404 from './pages/Error404';
+import ThankYou from './pages/ThankYou';
+
+import NavBar from './components/layout/NavBar';
+import Footer from './components/layout/Footer';
+
+import Cart from './components/user/Cart';
+import Checkout from './components/user/Checkout';
+import FavoritesList from './components/user/FavoritesList';
+import HistorialCompras from './components/user/HistorialCompras';
+
+import ItemListContainer from './components/items/ItemListContainer';
+import ItemDetailContainer from './components/items/ItemDetailContainer';
+
+import AdminDashboard from './Admin/AdminDashboard';
+
+import CartContextProvider from './context/CartContext';
+import { FavoritesProvider } from "./context/FavoritesContext";
+import { AuthProvider } from "./context/AuthContext";
+
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 
 function App() {

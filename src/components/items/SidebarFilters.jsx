@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useRef } from "react";
-import "./sidebar.css";
+import "./style/sidebar.css";
 import { motion, AnimatePresence } from "framer-motion";
 
 const SidebarFilters = ({ productos, filtros, setFiltros }) => {

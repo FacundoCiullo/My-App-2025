@@ -1,8 +1,8 @@
 // src/components/Checkout.jsx
 import { useContext, useState, useEffect } from "react";
-import { CartContext } from "../context/CartContext";
-import { useAuth } from "../context/AuthContext";
-import { db } from "../firebase";
+import { CartContext } from "../../context/CartContext";
+import { useAuth } from "../../context/AuthContext";
+import { db } from "../../firebase";
 import { addDoc, collection } from "firebase/firestore";
 import { Navigate } from "react-router-dom";
 

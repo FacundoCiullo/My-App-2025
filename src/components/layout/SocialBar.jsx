@@ -1,6 +1,5 @@
-// src/components/SocialBar.jsx
 import React from "react";
-
+import "./style/Layout.css";
 
 const socialLinks = [
   { href: "https://www.instagram.com", iconClass: "bi-instagram", label: "Instagram" },
@@ -19,7 +18,7 @@ const SocialBar = ({ inline = true }) => {
             target="_blank"
             rel="noopener noreferrer"
             aria-label={s.label}
-            className="text-decoration-none"
+            className="text-decoration-none social-icon"
           >
             <i className={`bi ${s.iconClass} fs-4`}></i>
           </a>
@@ -27,16 +26,16 @@ const SocialBar = ({ inline = true }) => {
       </div>
     );
   }
+
   return (
-    <div className="d-flex justify-content-center my-3">
+    <div className="social-bar-circle d-flex justify-content-center my-3">
       {socialLinks.map((s, i) => (
         <a
           key={i}
           href={s.href}
           target="_blank"
           rel="noopener noreferrer"
-          className="btn btn-light rounded-circle shadow-sm mx-1"
-          style={{ width: 44, height: 44, display: "inline-flex", alignItems: "center", justifyContent: "center" }}
+          className="social-btn-circle"
           aria-label={s.label}
         >
           <i className={`bi ${s.iconClass}`}></i>
@@ -47,5 +46,3 @@ const SocialBar = ({ inline = true }) => {
 };
 
 export default SocialBar;
-
-

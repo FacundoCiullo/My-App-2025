@@ -10,7 +10,7 @@ import {
   where,
   query
 } from "firebase/firestore";
-import Loading from "../Loading";
+import Loading from "../ui/Loading";
 
 const ItemListContainer = ({ limit }) => {
   const [items, setItems] = useState([]);

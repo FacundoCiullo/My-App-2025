@@ -1,0 +1,143 @@
+/* ============================
+  NAVBAR
+============================ */
+
+.navbar-custom {
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+/* Subrayado del navbar */
+.nav-underline {
+  position: relative;
+  padding-bottom: 2px;
+}
+
+.nav-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background-color: white;
+  transition: width 0.25s ease;
+}
+
+.nav-underline:hover::after {
+  width: 100%;
+}
+
+/* ============================
+  SIDEBAR
+============================ */
+
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+  padding: 8px 0;
+  position: relative;
+}
+
+.sidebar-link:hover {
+  color: #eee;
+}
+
+.sidebar-link::after {
+  content: "";
+  position: absolute;
+  left: 32px;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background-color: white;
+  transition: width 0.25s ease;
+}
+
+.sidebar-link:hover::after {
+  width: calc(100% - 32px);
+}
+
+/* Avatar */
+.nav-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #666;
+}
+
+/* Avatar grande del sidebar */
+.sidebar-avatar {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #666;
+  margin-bottom: 10px;
+}
+
+
+
+
+
+/* ============================
+  ⭐ SOCIAL BAR
+============================ */
+
+.social-bar a {
+  color: var(--color-text);
+  transition: transform 0.15s ease, color 0.15s ease;
+}
+
+.social-bar a:hover {
+  transform: translateY(-3px);
+  color: var(--color-accent);
+}
+
+/* Estilo para la versión circular */
+.social-btn-circle {
+  width: 44px;
+  height: 44px;
+  background: #fff;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 6px;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.15s ease;
+  text-decoration: none;
+  color: var(--color-dark);
+}
+
+.social-btn-circle:hover {
+  transform: translateY(-3px);
+}
+
+
+
+/* =========================================================
+  🦶 FOOTER
+========================================================= */
+
+.texto-footer {
+  display: flex;
+  justify-content: center;
+  color: var(--white);
+  font-size: 0.75rem;
+}
+
+.icon-footer {
+  color: var(--white);
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+  display: inline-block;
+  transition: 0.2s ease;
+}
+
+.icon-footer:hover {
+  opacity: 0.7;
+}

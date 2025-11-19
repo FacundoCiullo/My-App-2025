@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import ItemList from "./items/ItemList";
+import ItemList from "../items/ItemList";
 import { getFirestore, collection, getDocs } from "firebase/firestore";
-import Loading from "./Loading";
+import Loading from "../ui/Loading";
 
 const Destacados = ({ limit = 8 }) => {
   const [items, setItems] = useState([]);

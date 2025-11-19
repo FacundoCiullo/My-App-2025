@@ -1,8 +1,8 @@
 // src/components/HistorialCompras.jsx
 import { useEffect, useState } from "react";
 import { collection, getDocs, query, where } from "firebase/firestore";
-import { db } from "../firebase";
-import { useAuth } from "../context/AuthContext";
+import { db } from "../../firebase";
+import { useAuth } from "../../context/AuthContext";
 import Spinner from "react-bootstrap/Spinner";
 
 const HistorialCompras = () => {

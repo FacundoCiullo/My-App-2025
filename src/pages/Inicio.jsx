@@ -2,13 +2,14 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Carousel from "react-bootstrap/Carousel";
 import Card from "react-bootstrap/Card";
-import SocialBar from "./SocialBar";
-import Testimonials from "./Testimonials";
+import SocialBar from "../components/layout/SocialBar";
+import Testimonials from "../components/sections/Testimonials";
 import Button from "react-bootstrap/Button";
-import Destacados from "./Destacados";
+import Destacados from "../components/sections/Destacados";
 import { motion } from "framer-motion";
-import Favorites from "./Favorites";
+import Favorites from "../components/user/Favorites";
 import { useAuth } from "../context/AuthContext";
+
 
 const Inicio = () => {
   const { usuario, loading } = useAuth(); // 🔹 usamos usuario y loading del contexto
@@ -159,7 +160,7 @@ const Inicio = () => {
         transition={{ duration: 1 }}
       >
         <h2 className="fw-bold mb-3">¿Listo para tu próximo look?</h2>
-        <p className="lead mb-4">Encontrá lo que buscás y recibilo en casa.</p>
+        <p className="lead mb-4">Encontrá lo que buscás</p>
         <Link to="/contacto">
           <Button variant="light" size="lg">Contactanos</Button>
         </Link>

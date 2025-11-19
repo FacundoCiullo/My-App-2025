@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import Card from "react-bootstrap/Card";
-import ItemQuickView from "./items/ItemQuickView"; // ✅ ajustado
-import { useFavorites } from "../context/FavoritesContext"; // ✅ usamos el hook del contexto
+import ItemQuickView from "../items/ItemQuickView"; // ✅ ajustado
+import { useFavorites } from "../../context/FavoritesContext"; // ✅ usamos el hook del contexto
 
 const FavoritesList = () => {
   const { favorites } = useFavorites(); // ✅ accedemos con el hook
@@ -18,8 +18,8 @@ const FavoritesList = () => {
   // 🔹 Si no hay favoritos
   if (!favorites || favorites.length === 0) {
     return (
-      <div className="text-center text-muted my-5" style={{ paddingTop: "2rem" }}>
-        <h5>No tienes productos en favoritos ❤️</h5>
+      <div className="text-center text-muted my-5">
+        <h5>No tienes productos en favoritos</h5>
         <p>Explorá los productos y marcá algunos con el corazón.</p>
         <Link to="/Productos" className="btn btn-dark mt-3">
           Ver productos
@@ -40,8 +40,8 @@ const FavoritesList = () => {
   };
 
   return (
-    <div className="container my-5" style={{ paddingTop: "2rem" }}>
-      <h2 className="text-center mb-4 fw-bold">❤️ Tus Favoritos</h2>
+    <div className="container my-5">
+      <h2 className="text-center mb-4 fw-bold">Favoritos</h2>
 
       <motion.div
         className="row g-4 justify-content-center"

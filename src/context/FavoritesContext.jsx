@@ -44,3 +44,5 @@ export const FavoritesProvider = ({ children }) => {
 };
 
 export const useFavorites = () => useContext(FavoritesContext);
+
+

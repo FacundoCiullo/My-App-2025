@@ -44,10 +44,10 @@ const ItemQuickView = ({ show, handleClose, producto }) => {
     addItem({ ...producto, color, talle }, cantidad);
     handleClose();
 
-    toast.success(`${producto.titulo} agregado al carrito 🛒`, {
+    toast.success(`${producto.titulo} agregado al carrito`, {
       position: "top-center",
       autoClose: 2500,
-      theme: "colored",
+      theme: "",
       onClick: () => navigate("/cart"),
     });
   };
@@ -55,9 +55,9 @@ const ItemQuickView = ({ show, handleClose, producto }) => {
   const handleFavorito = () => {
     toggleFavorite(producto);
     const msg = isFavorite(producto.id)
-      ? "Eliminado de favoritos 💔"
-      : "Agregado a favoritos ⭐";
-    toast.info(msg, { position: "top-center", autoClose: 1500 });
+      ? "Eliminado de favoritos"
+      : "Agregado a favoritos";
+    toast.success(msg, { position: "top-center", autoClose: 1500, });
   };
 
   return (
