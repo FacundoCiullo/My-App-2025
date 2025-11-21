@@ -6,21 +6,26 @@ import { useAuth } from "../../context/AuthContext";
 import Spinner from "react-bootstrap/Spinner";
 
 const HistorialCompras = () => {
-  const { usuario } = useAuth();
+  // 🔹 Obtenemos el usuario logueado y el estado de carga desde AuthContext
+  const { user, loading: authLoading } = useAuth();
+
+  // Estado local para almacenar las órdenes del usuario
   const [ordenes, setOrdenes] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(true); // Control de carga de las órdenes
 
   useEffect(() => {
-    if (!usuario) {
+    // Si no hay usuario logueado, no intentamos cargar órdenes
+    if (!user) {
       setLoading(false);
       return;
     }
 
+    // Función asíncrona para cargar las órdenes desde Firebase
     const cargarOrdenes = async () => {
       try {
         const q = query(
           collection(db, "orders"),
-          where("buyer.email", "==", usuario.email)
+          where("buyer.email", "==", user.email)
         );
 
         const querySnapshot = await getDocs(q);
@@ -29,18 +34,19 @@ const HistorialCompras = () => {
           ...doc.data(),
         }));
 
-        setOrdenes(resultados);
+        setOrdenes(resultados); // Guardamos las órdenes en el estado local
       } catch (error) {
         console.error("Error cargando historial:", error);
       } finally {
-        setLoading(false);
+        setLoading(false); // Indicamos que la carga terminó
       }
     };
 
     cargarOrdenes();
-  }, [usuario]);
+  }, [user]);
 
-  if (loading) {
+  // 🔹 Mostramos spinner mientras AuthContext o las órdenes cargan
+  if (authLoading || loading) {
     return (
       <div className="d-flex justify-content-center mt-5">
         <Spinner animation="border" />
@@ -48,7 +54,8 @@ const HistorialCompras = () => {
     );
   }
 
-  if (!usuario) {
+  // 🔹 Si no hay usuario logueado, mostramos mensaje
+  if (!user) {
     return (
       <h3 className="text-center mt-5">
         Debes iniciar sesión para ver tu historial.
@@ -56,6 +63,7 @@ const HistorialCompras = () => {
     );
   }
 
+  // 🔹 Si no hay órdenes, indicamos que no hay compras
   if (ordenes.length === 0) {
     return (
       <h4 className="text-center mt-5 text-muted">
@@ -64,6 +72,7 @@ const HistorialCompras = () => {
     );
   }
 
+  // 🔹 Renderizamos las órdenes del usuario
   return (
     <div className="container my-5">
       <h2 className="mb-4 fw-bold">Historial de compras</h2>
@@ -71,6 +80,7 @@ const HistorialCompras = () => {
       {ordenes.map((ord) => (
         <div key={ord.id} className="card shadow-sm mb-4">
           <div className="card-body">
+            {/* Header de la orden */}
             <div className="d-flex justify-content-between align-items-center mb-3">
               <h5 className="card-title m-0">Orden #{ord.id}</h5>
               <span className="badge bg-secondary">{ord.date}</span>
@@ -78,6 +88,7 @@ const HistorialCompras = () => {
 
             <hr />
 
+            {/* Items de la orden */}
             {ord.items.map((item) => (
               <div
                 key={item.id}
@@ -111,6 +122,7 @@ const HistorialCompras = () => {
 
             <hr />
 
+            {/* Total de la orden */}
             <div className="d-flex justify-content-between mt-3">
               <strong>Total pagado:</strong>
               <strong className="text-success fs-5">${ord.total}</strong>

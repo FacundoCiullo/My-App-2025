@@ -9,7 +9,7 @@ import Destacados from "../components/sections/Destacados";
 import { motion } from "framer-motion";
 import Favorites from "../components/user/Favorites";
 import { useAuth } from "../context/AuthContext";
-
+import { BsBookmarkStarFill } from "react-icons/bs";
 
 const Inicio = () => {
   const { usuario, loading } = useAuth(); // 🔹 usamos usuario y loading del contexto
@@ -103,10 +103,18 @@ const Inicio = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-center mb-4 fw-bold">Productos Favoritos</h2>
+          <h2 className="text-center mb-4 fw-bold">
+            Productos Favoritos
+            <BsBookmarkStarFill
+              size={36}
+              color= "#ffcc00"
+            />
+            </h2>
           <Favorites limit={4} />
         </motion.section>
       )}
+
+      
 
       {/* 🔹 Sección de conexión con redes */}
       <section className="container my-5">

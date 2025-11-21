@@ -1,0 +1,82 @@
+.iqv-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.iqv-imagenes {
+  flex: 1;
+  min-width: 260px;
+  text-align: center;
+}
+
+.iqv-img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 14px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}
+
+.iqv-detalles {
+  flex: 1;
+  min-width: 260px;
+}
+
+.iqv-precio-fav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.iqv-fav-icon {
+  cursor: pointer;
+}
+
+.iqv-descripcion {
+  margin-top: 10px;
+}
+
+.iqv-group {
+  margin-bottom: 15px;
+}
+
+.iqv-options {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.iqv-cantidad {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.iqv-input-cantidad {
+  width: 80px;
+}
+
+.iqv-botones {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  .iqv-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .iqv-botones {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .iqv-botones a,
+  .iqv-botones button {
+    width: 100%;
+  }
+}

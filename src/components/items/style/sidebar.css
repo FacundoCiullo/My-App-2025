@@ -1,6 +1,7 @@
 /* Sidebar general */
 .pro-sidebar {
-  padding: 20px;
+  position: fixed;
+  padding: 10px;
   background: #ffffff;
   border-radius: 12px;
   border: 1px solid #ececec;
@@ -25,23 +26,21 @@
 .filter-grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 2px;
   margin-bottom: 12px;
 }
-
-
 
 
 
 /* Botón limpiar */
 .btn-clear-filters {
   width: 100%;
-  margin-top: 16px;
-  padding: 10px 0;
+  margin-top: 5px;
+  padding: 5px 0;
   border: none;
   border-radius: 8px;
   background: #e8e8e8;
-  font-weight: 600;
+  font-weight: 500;
   transition: 0.2s ease;
 }
 
@@ -100,8 +99,6 @@
 
 
 
-
-
 .pill-btn {
   background-color: #f4f4f4; /* color principal dark de Bootstrap */
   color: #343a40;            /* texto blanco */
@@ -121,4 +118,15 @@
 .pill-btn.selected {
   background-color: #343a40; /* más oscuro cuando está seleccionado */
   color: #ffffff;             /* texto blanco */
+}
+
+.sidebar-filtros {
+  position: static; /* ya NO sticky */
+}
+
+/* Nuevo contenedor fijo */
+.sticky-wrapper {
+  position: sticky;
+  top: 5rem; /* compensación por tu navbar */
+  z-index: 10;
 }

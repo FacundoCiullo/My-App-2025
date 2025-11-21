@@ -37,26 +37,26 @@ const ItemList = ({ productos }) => {
 
   return (
     <>
-      <motion.div
-        className="row g-4 justify-content-center"
-        variants={containerVariants}
-        initial="hidden"
-        animate="show"
-      >
-        {productos.map((producto) => (
-          <motion.div
-            key={`${producto.id}-${producto.colorForzado || "default"}`}
-            variants={itemVariants}
-            className="col-10 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center"
-          >
-            <Item
-              producto={producto}
-              colorSeleccionado={producto.colorForzado || null}
-              handleQuickView={handleQuickView}
-            />
-          </motion.div>
-        ))}
-      </motion.div>
+        <motion.div
+          className="items-container"
+          variants={containerVariants}
+          initial="hidden"
+          animate="show"
+        >
+          {productos.map((producto) => (
+            <motion.div
+              key={`${producto.id}-${producto.colorForzado || "default"}`}
+              variants={itemVariants}
+              className="item-wrapper"
+            >
+              <Item
+                producto={producto}
+                colorSeleccionado={producto.colorForzado || null}
+                handleQuickView={handleQuickView}
+              />
+            </motion.div>
+          ))}
+        </motion.div>
 
       <ItemQuickView
         show={showModal}

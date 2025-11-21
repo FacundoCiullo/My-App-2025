@@ -108,7 +108,7 @@ const ItemListContainer = ({ limit }) => {
         </div>
 
         {/* LISTA DE PRODUCTOS */}
-        <div className="col-12 col-md-9">
+        <div className="col-12 col-md-8">
           <ItemList productos={filtered} />
         </div>
       </div>

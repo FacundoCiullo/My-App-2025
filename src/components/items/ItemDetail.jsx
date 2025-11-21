@@ -42,10 +42,14 @@ const ItemDetail = ({ producto }) => {
     );
   };
 
+  const handleFavorite = () => {
+    // ❌ Sin toasts → solo agrega/quita
+    toggleFavorite(producto);
+  };
+
   return (
     <div className="container my-5">
       <div className="row align-items-center">
-
         {/* IMÁGENES */}
         <div className="col-md-6 text-center">
           {imagenes.length > 1 ? (
@@ -77,10 +81,11 @@ const ItemDetail = ({ producto }) => {
 
         {/* INFORMACIÓN */}
         <div className="col-md-6">
-
           {/* Título + Favorito */}
           <div className="d-flex justify-content-between">
-            <h2>{producto.titulo}</h2>
+            <h2>
+              {producto.marca} {producto.titulo}
+            </h2>
 
             <motion.div
               whileTap={{ scale: 1.3 }}
@@ -88,7 +93,7 @@ const ItemDetail = ({ producto }) => {
                 scale: isFavorite(producto.id) ? [1, 1.3, 1] : 1,
                 transition: { duration: 0.3 },
               }}
-              onClick={() => toggleFavorite(producto)}
+              onClick={handleFavorite}
               style={{ cursor: "pointer" }}
             >
               <BsBookmarkStarFill
@@ -98,7 +103,9 @@ const ItemDetail = ({ producto }) => {
             </motion.div>
           </div>
 
-          <h4 className="fw-bold">${producto.precio?.toLocaleString("es-AR")}</h4>
+          <h4 className="fw-bold">
+            ${producto.precio?.toLocaleString("es-AR")}
+          </h4>
 
           <p>{producto.descripcion || "Sin descripción disponible."}</p>
 
@@ -150,13 +157,9 @@ const ItemDetail = ({ producto }) => {
             />
           </div>
 
-          {/* BOTÓN */}
-          <div className="mt-3 ">
-            <Button
-              variant="dark"
-              className="w-100"
-              onClick={handleAdd}
-            >
+          {/* BOTÓN CARRITO */}
+          <div className="mt-3">
+            <Button variant="dark" className="w-100" onClick={handleAdd}>
               🛒 Agregar al carrito
             </Button>
           </div>

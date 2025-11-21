@@ -1,10 +1,17 @@
 // src/components/items/Item.jsx
 import "./style/Item.css";
-import Card from "react-bootstrap/Card";
 import { useState } from "react";
+import { HeartFill, Heart } from "react-bootstrap-icons";
+import { useFavorites } from "../../context/FavoritesContext";
+import { useAuth } from "../../context/AuthContext";
 
 const Item = ({ producto, colorSeleccionado, handleQuickView }) => {
   const [hover, setHover] = useState(false);
+
+  const { toggleFavorite, isFavorite } = useFavorites();
+  const { user } = useAuth();
+
+  const esFavorito = isFavorite(producto.id);
 
   const imagenFinal =
     colorSeleccionado &&
@@ -13,27 +20,48 @@ const Item = ({ producto, colorSeleccionado, handleQuickView }) => {
       ? producto.imagenesPorColor[colorSeleccionado]
       : producto.imagen;
 
+  const handleFavorito = (e) => {
+    // Evita que se abra QuickView
+    e.stopPropagation();
+
+    // Si no está logueado → no agrega el favorito
+    if (!user) return;
+
+    toggleFavorite(producto);
+  };
+
   return (
-    <Card
-      className={`card-producto ${hover ? "hover" : ""}`}
+    <div
+      className={`item-card ${hover ? "hover" : ""}`}
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
-      onClick={() => handleQuickView(producto)}
+      onClick={() => handleQuickView(producto)} // QuickView solo al tocar la card
     >
-      {/* Imagen con efecto */}
-      <Card.Img
-        variant="top"
-        src={imagenFinal}
-        alt={producto.titulo}
-        className="card-img"
-      />
+      {/* Badge */}
+      <span className="item-badge">new</span>
 
-      {/* Overlay inferior */}
-      <div className={`card-overlay ${hover ? "show" : ""}`}>
-        <h5 className="card-title">{producto.titulo}</h5>
-        <p className="card-desc">{producto.descripcion}</p>
+      {/* Favorito - NO abre QuickView */}
+      <span className="item-fav" onClick={handleFavorito}>
+        {esFavorito ? (
+          <HeartFill size={22} color="#ffcc00" />
+        ) : (
+          <Heart size={22} color="gray" />
+        )}
+      </span>
+
+      {/* Imagen */}
+      <div className="item-img-wrapper">
+        <img src={imagenFinal} alt={producto.titulo} className="item-img" />
       </div>
-    </Card>
+
+      {/* Info */}
+      <div className="item-info">
+        <h4 className="item-title">
+          {producto.marca} {producto.titulo}
+        </h4>
+        <p className="item-price">{producto.descripcion}</p>
+      </div>
+    </div>
   );
 };
 

@@ -1,0 +1,102 @@
+/* ---------------------------
+  MOBILE NAVBAR (abajo)
+--------------------------- */
+
+.mobile-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  border-top: 1px solid #e5e5e5;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.12);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 15px 0 15px;
+  z-index: 9999;
+}
+
+.mobile-nav a,
+.mobile-avatar-btn {
+  text-decoration: none;
+  color: #888;
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  transition: color 0.2s ease, transform 0.2s ease;
+  background: none;
+  border: none;
+}
+
+.mobile-nav a.active {
+  color: #000;
+  font-weight: 600;
+}
+
+.mobile-avatar-btn:active {
+  transform: scale(0.92);
+}
+
+.mobile-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+
+/* Ocultar en desktop */
+@media (min-width: 769px) {
+  .mobile-nav {
+    display: none !important;
+  }
+}
+
+
+/* Contenedor del icono + badge */
+.cart-icon-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Badge tipo Instagram/MercadoLibre */
+.cart-badge {
+  position: absolute;
+  top: -6px;
+  right: -8px;
+
+  min-width: 18px;
+  height: 18px;
+
+  padding: 0 4px;
+
+  background: #ff3b30; /* Rojo elegante estilo iOS */
+  color: #fff;
+
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 18px;
+  text-align: center;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: 0 2px 5px rgba(0,0,0,0.22);
+
+  transform-origin: center;
+  animation: cartBadgePop 0.2s ease-out;
+}
+
+/* Mini animación sutil */
+@keyframes cartBadgePop {
+  0% { transform: scale(0.6); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}

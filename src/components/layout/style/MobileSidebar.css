@@ -1,0 +1,135 @@
+/* Overlay con blur */
+.mobile-sidebar-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  backdrop-filter: blur(5px);
+  z-index: 999;
+}
+
+/* Panel lateral */
+.mobile-sidebar-panel {
+  position: fixed;
+  bottom: 5rem;
+  right: 0;
+  width: fit-content;
+  height: 80%;
+  background: #ffffff;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  box-shadow: -4px 0 15px rgba(0,0,0,0.2);
+  border-radius: 20px 0 0 20px;
+  overflow-y: auto;
+}
+
+/* Header */
+.sidebar-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.sidebar-avatar {
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.sidebar-header h3 {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.sidebar-header p {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Items */
+.sidebar-items {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 2px;
+  padding-right: 4px;
+}
+
+.sidebar-item {
+  width: 100%;
+  padding: 14px 15px;
+  background: #ffffff;
+  border: none;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1rem;
+}
+
+.sidebar-item svg {
+  font-size: 1.2rem;
+}
+
+/* Footer */
+.sidebar-footer {
+  margin-top: auto;
+}
+
+.logout-btn {
+  width: 100%;
+  padding: 14px 15px;
+  background: #222;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Header Sin logueo*/
+
+.sidebar-avatar {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #fff;
+}
+
+.empty-avatar {
+  background: #c6c6c6;
+  display: inline-block;
+}
+
+.google-login-btn {
+  margin-top: 15px;
+  padding: 10px 14px;
+  width: 80%;
+  background: #fff;
+  color: #222;
+  border-radius: 10px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.google-login-btn:hover {
+  background: #e8e8e8;
+}
+
+.update-btn {
+  background: #0dcaf0;
+  color: #000;
+  font-weight: 600;
+}
+
+.update-btn:hover {
+  background: #0bb2d2;
+}
+
+

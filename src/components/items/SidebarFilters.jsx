@@ -67,7 +67,9 @@ const SidebarFilters = ({ productos, filtros, setFiltros }) => {
   };
 
   return (
-    <aside className="sidebar-filtros shadow-sm pro-sidebar sticky-sidebar">
+<aside className="sidebar-filtros shadow-sm pro-sidebar">
+
+  <div className="sticky-wrapper">
 
       {/* Categorías */}
       <h5 className="filter-title">📂 Categorías</h5>
@@ -193,7 +195,7 @@ const SidebarFilters = ({ productos, filtros, setFiltros }) => {
       <button className="btn-clear-filters" onClick={limpiarFiltros}>
         Limpiar filtros
       </button>
-
+  </div>
     </aside>
   );
 };

@@ -1,44 +1,25 @@
 import React from "react";
-import "./style/Layout.css";
+import './style/layout.css';
 
 const socialLinks = [
-  { href: "https://www.instagram.com", iconClass: "bi-instagram", label: "Instagram" },
-  { href: "https://www.facebook.com", iconClass: "bi-facebook", label: "Facebook" },
-  { href: "https://www.whatsapp.com", iconClass: "bi-whatsapp", label: "WhatsApp" },
+  { href: "https://www.instagram.com", icon: "bi-instagram", label: "Instagram" },
+  { href: "https://www.facebook.com", icon: "bi-facebook", label: "Facebook" },
+  { href: "https://www.whatsapp.com", icon: "bi-whatsapp", label: "WhatsApp" },
 ];
 
 const SocialBar = ({ inline = true }) => {
-  if (inline) {
-    return (
-      <div className="social-bar d-flex gap-3 align-items-center">
-        {socialLinks.map((s, i) => (
-          <a
-            key={i}
-            href={s.href}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label={s.label}
-            className="text-decoration-none social-icon"
-          >
-            <i className={`bi ${s.iconClass} fs-4`}></i>
-          </a>
-        ))}
-      </div>
-    );
-  }
-
   return (
-    <div className="social-bar-circle d-flex justify-content-center my-3">
+    <div className={inline ? "social-inline d-flex gap-3 align-items-center" : "social-circle-wrapper"}>
       {socialLinks.map((s, i) => (
         <a
           key={i}
           href={s.href}
           target="_blank"
           rel="noopener noreferrer"
-          className="social-btn-circle"
           aria-label={s.label}
+          className={inline ? "social-icon" : "social-btn-circle"}
         >
-          <i className={`bi ${s.iconClass}`}></i>
+          <i className={`bi ${s.icon} ${inline ? "fs-4" : ""}`}></i>
         </a>
       ))}
     </div>

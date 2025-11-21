@@ -15,13 +15,15 @@ import HistorialCompras from './components/user/HistorialCompras';
 import ItemListContainer from './components/items/ItemListContainer';
 import ItemDetailContainer from './components/items/ItemDetailContainer';
 
-import AdminDashboard from './Admin/AdminDashboard';
+import AdminDashboard from "./Admin/AdminDashboard";
 
 import CartContextProvider from './context/CartContext';
 import { FavoritesProvider } from "./context/FavoritesContext";
 import { AuthProvider } from "./context/AuthContext";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import MobileNavbar from "./components/layout/MobileNavbar";
 
 
 function App() {
@@ -51,6 +53,8 @@ function App() {
                 </Routes>
               </main>
               <Footer />
+              {/* navbar mobile */}
+              <MobileNavbar />
             </BrowserRouter>
           </CartContextProvider>
         </FavoritesProvider>

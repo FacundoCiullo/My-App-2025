@@ -1,62 +1,118 @@
-
-
-
-
 /* ============================================
   🛍 ESTILOS PARA LAS CARDS DE PRODUCTOS
 ============================================ */
 
-.card-producto {
-  border: 0;
-  border-radius: 0;
-  overflow: hidden;
+/* src/components/items/style/Item.css */
+.item-card {
   position: relative;
+  width: 100%;           /* ✔ ahora responsivo */
+  max-width: 200px;      /* ✔ límite suave */
+  padding: 0rem;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
   cursor: pointer;
-  transition: transform 0.3s ease;
+  transition: transform .2s ease, box-shadow .2s ease;
 }
 
-/* Imagen con transición */
-.card-img {
-  height: 300px;
-  object-fit: cover;
-  transition: transform 0.4s ease;
+.item-card.hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
 }
 
-.card-producto.hover .card-img {
-  transform: scale(1.08) translateY(-0.7rem);
-}
-
-/* Overlay */
-.card-overlay {
+/* Badge */
+.item-badge {
   position: absolute;
-  bottom: 0;
-  left: 0;
+  top: 8px;
+  left: 8px;
+  background: #000;
+  color: #fff;
+  font-size: 12px;
+  padding: 3px 8px;
+  border-radius: 12px;
+}
+
+/* Icono favorito */
+.item-fav {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  cursor: pointer;
+}
+
+/* Imagen centrada */
+.item-img-wrapper {
   width: 100%;
-  height: 30%;
-  background: rgba(255, 255, 255, 0.92);
-  backdrop-filter: blur(2px);
-  color: black;
-  padding: 12px;
-  opacity: 0;
-  transition: opacity 0.3s ease;
+  height: 180px;
   display: flex;
-  flex-direction: column;
   justify-content: center;
+  align-items: end;
 }
 
-.card-overlay.show {
-  opacity: 1;
+.item-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
-.card-title {
-  margin: 0;
+/* Info */
+.item-info {
+  margin-top: 10px;
+  text-align: left;
+  margin-left: 0.5rem;
+}
+
+.item-title {
+  font-size: 15px;
   font-weight: 500;
 }
 
-.card-desc {
-  margin: 4px 0;
-  font-size: 0.85rem;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
+.item-price {
+  font-size: 14px;
+  color: #444;
 }
+
+
+@media (max-width: 768px) {
+  .item-card {
+    max-width: 170px;   /* ✔ se ajusta más en mobile */
+    padding: 6px !important;
+    border-radius: 10px;
+  }
+
+  .item-img {
+    height: 150px !important;
+  }
+
+  .item-card.hover {
+  transform: translateY(0px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+}
+
+/* Contenedor general de items */
+.items-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 16px;
+  justify-items: center;
+}
+
+/* Wrapper individual de cada item (motion.div) */
+.item-wrapper {
+  width: 100%;
+}
+.item-img {
+  max-width: 100%;
+  height: auto; /* evita forzar más ancho del contenedor */
+  object-fit: contain;
+}
+
+/* Media query para mobile: siempre 2 columnas */
+@media (max-width: 768px) {
+  .items-container {
+    gap: 6px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
