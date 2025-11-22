@@ -6,15 +6,14 @@ import { BsHeart, BsHeartFill } from "react-icons/bs";
 import { RiShoppingCart2Line, RiShoppingCart2Fill } from "react-icons/ri";
 import { LuBoxes } from "react-icons/lu";
 import { FaUserCircle } from "react-icons/fa";
-
 import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from "../../firebase";
-
 import { useContext, useState } from "react";
 import { CartContext } from "../../context/CartContext";
-
 import MobileSidebar from "./MobileSidebar";
 import "./style/MobileNavbar.css";
+
+
 
 const MobileNavbar = () => {
   const location = useLocation();

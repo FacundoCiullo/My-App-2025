@@ -1,0 +1,185 @@
+/* =========================================================
+   CONTENEDOR GENERAL
+========================================================= */
+.cart-container {
+  padding: 20px;
+}
+
+/* =========================================================
+  MOBILE VERSION (DEFAULT)
+  Las tarjetas y el price box solo aparecen en mobile
+========================================================= */
+
+.mobile-cart-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* ------------------- CARD ------------------- */
+.mobile-cart-card {
+  display: flex;
+  background: #e3e3e384;
+  border-radius: 15px;
+  padding: 10px;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-left img {
+  border-radius: 10px;
+  display: flex;
+  width: 85px;
+  height: 90px;
+}
+
+.card-right {
+  flex: 1;
+  margin-left: 10px;
+}
+
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-top h2 {
+  font-size: 1rem;
+  margin: 0;
+  font-weight: 600;
+}
+
+.remove-btn {
+  background: #ffd7d7;
+  border: none;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.item-color {
+  font-size: 0.9rem;
+  margin-top: 0px;
+  color: #555;
+  margin-bottom: 0;
+}
+
+.item-color span {
+  font-weight: bold;
+}
+
+.item-price {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin: 6px 0 4px 0;
+}
+
+
+.item-cart-footer {
+  display: flex;
+  justify-content: space-between;
+  justify-items: center;
+  align-items: baseline
+}
+
+
+/* ------------------- PRICE DETAILS ------------------- */
+
+.price-details {
+  background: #e3e3e384;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.price-details h3 {
+  margin-bottom: 10px;
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.price-row {
+  display: flex;
+  justify-content: space-between;
+  margin: 4px 0;
+  font-size: 0.95rem;
+}
+
+.price-row.total {
+  font-weight: bold;
+  border-top: 1px solid #ccc;
+  padding-top: 8px;
+  margin-top: 8px;
+}
+
+/* ------------------- BUTTONS ------------------- */
+
+.continue-btn {
+  display: block;
+  width: 90%;
+  height: 50px;
+  margin: 0px auto 0;
+  padding: 10px ;
+  color: #f7f7f7;
+  background: #5f5f5f;
+  border: none;
+  border-radius: 10px;
+}
+
+.clear-mobile {
+  display: block;
+  width: 50%;
+  height: 30px;
+  margin: 0px auto 0;
+  padding: 0px 15px;
+  color: #f7f7f7;
+  background: #964242;
+  border: none;
+  border-radius: 10px;
+}
+
+.keep-buying-mobile {
+  display: block;
+  text-align: center;
+  margin-top: 12px;
+  color: #444;
+  text-decoration: underline;
+}
+
+/* =========================================================
+  DESKTOP VERSION
+  Se oculta el mobile, y aparece la tabla original
+========================================================= */
+
+.desktop-table {
+  display: none;
+}
+
+/* ------------------- DESKTOP ONLY ------------------- */
+@media (min-width: 768px) {
+  .mobile-cart-list {
+    display: none;
+  }
+
+  .desktop-table {
+    display: block;
+  }
+
+  .cart-item-img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+  }
+
+  .cart-clear-btn,
+  .cart-remove-btn,
+  .cart-checkout-btn,
+  .cart-continue-btn {
+    border-radius: 8px;
+  }
+}
+
+

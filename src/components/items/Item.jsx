@@ -37,9 +37,11 @@ const Item = ({ producto, colorSeleccionado, handleQuickView }) => {
       onMouseLeave={() => setHover(false)}
       onClick={() => handleQuickView(producto)} // QuickView solo al tocar la card
     >
-      {/* Badge */}
+      {/* Badge 
       <span className="item-badge">new</span>
+      */}
 
+      
       {/* Favorito - NO abre QuickView */}
       <span className="item-fav" onClick={handleFavorito}>
         {esFavorito ? (
@@ -56,10 +58,10 @@ const Item = ({ producto, colorSeleccionado, handleQuickView }) => {
 
       {/* Info */}
       <div className="item-info">
-        <h4 className="item-title">
+        <h6 className="item-title">
           {producto.marca} {producto.titulo}
-        </h4>
-        <p className="item-price">{producto.descripcion}</p>
+        </h6>
+        <p className="item-precio"> ${producto.precio}</p>
       </div>
     </div>
   );

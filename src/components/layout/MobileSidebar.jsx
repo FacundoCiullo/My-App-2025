@@ -1,20 +1,10 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
-
-import {
-  FaShoppingCart,
-  FaHeart,
-  FaHistory,
-  FaUserCog,
-  FaGoogle,
-  FaSync,
-} from "react-icons/fa";
+import { FaShoppingCart, FaHeart, FaHistory, FaUserCog, FaGoogle, FaSync } from "react-icons/fa";
 import { FiLogOut } from "react-icons/fi";
-
 import { auth, googleProvider, db } from "../../firebase";
 import { signInWithPopup, signOut } from "firebase/auth";
 import { collection, setDoc, doc } from "firebase/firestore";
-
 import productos from "../../json/productos.json";
 import "./style/MobileSidebar.css";
 
@@ -43,11 +33,9 @@ const MobileSidebar = ({ showSidebar, setShowSidebar, user }) => {
   const handleActualizarProductos = async () => {
     try {
       const productosRef = collection(db, "productos");
-
       for (const producto of productos) {
         await setDoc(doc(productosRef, String(producto.id)), producto);
       }
-
       alert("Productos actualizados correctamente ✔️");
       setShowSidebar(false);
     } catch (error) {
@@ -60,7 +48,6 @@ const MobileSidebar = ({ showSidebar, setShowSidebar, user }) => {
     <AnimatePresence>
       {showSidebar && (
         <>
-          {/* Overlay */}
           <motion.div
             className="mobile-sidebar-overlay"
             onClick={() => setShowSidebar(false)}
@@ -70,7 +57,6 @@ const MobileSidebar = ({ showSidebar, setShowSidebar, user }) => {
             transition={{ duration: 0.25 }}
           />
 
-          {/* Panel */}
           <motion.div
             className="mobile-sidebar-panel"
             initial={{ x: "100%" }}
@@ -97,77 +83,53 @@ const MobileSidebar = ({ showSidebar, setShowSidebar, user }) => {
                   <h3>Bienvenido</h3>
                   <p>Iniciá sesión para ver tu cuenta</p>
 
+            <hr className="sidebar-separator" />
+
                   <button className="google-login-btn" onClick={handleLogin}>
-                    <FaGoogle className="me-2" />
-                    Iniciar sesión con Google
+                    <FaGoogle className="me-2" /> Iniciar sesión con Google
                   </button>
                 </>
               )}
             </div>
 
-            {/* SOLO SE MUESTRA SI ESTÁ LOGUEADO */}
-            {user && (
-              <div className="sidebar-items">
+            <hr className="sidebar-separator" />
 
-                <Link
-                  to="/cart"
-                  className="sidebar-item"
-                  onClick={() => setShowSidebar(false)}
-                >
-                  <FaShoppingCart />
-                  Carrito
-                </Link>
+            {/* ITEMS */}
+            <div className="sidebar-items">
+              {user && (
+                <>
+                  <Link to="/cart" className="sidebar-item" onClick={() => setShowSidebar(false)}>
+                    <FaShoppingCart /> Carrito
+                  </Link>
 
-                <Link
-                  to="/favoritos"
-                  className="sidebar-item"
-                  onClick={() => setShowSidebar(false)}
-                >
-                  <FaHeart />
-                  Favoritos
-                </Link>
+                  <Link to="/favoritos" className="sidebar-item" onClick={() => setShowSidebar(false)}>
+                    <FaHeart /> Favoritos
+                  </Link>
 
-                <Link
-                  to="/historial"
-                  className="sidebar-item"
-                  onClick={() => setShowSidebar(false)}
-                >
-                  <FaHistory />
-                  Historial
-                </Link>
+                  <Link to="/historial" className="sidebar-item" onClick={() => setShowSidebar(false)}>
+                    <FaHistory /> Historial
+                  </Link>
 
-                {esAdmin && (
-                  <>
-                    <Link
-                      to="/admin"
-                      className="sidebar-item admin-item"
-                      onClick={() => setShowSidebar(false)}
-                    >
-                      <FaUserCog />
-                      Panel de administración
-                    </Link>
+                  {/* Logout como link */}
+                  <button className="sidebar-item logout-btn" onClick={handleLogout}>
+                    <FiLogOut /> Cerrar sesión
+                  </button>
 
-                    <button
-                      className="sidebar-item update-btn"
-                      onClick={handleActualizarProductos}
-                    >
-                      <FaSync />
-                      Actualizar productos
-                    </button>
-                  </>
-                )}
-              </div>
-            )}
+                  {esAdmin && (
+                    <>
+                      <Link to="/admin" className="sidebar-item admin-item" onClick={() => setShowSidebar(false)}>
+                        <FaUserCog /> Panel de administración
+                      </Link>
+                      
+                      <button className="sidebar-item update-btn" onClick={handleActualizarProductos}>
+                        <FaSync /> Actualizar productos
+                      </button>
+                    </>
+                  )}
 
-            {/* LOGOUT */}
-            {user && (
-              <div className="sidebar-footer">
-                <button className="logout-btn" onClick={handleLogout}>
-                  <FiLogOut />
-                  Cerrar sesión
-                </button>
-              </div>
-            )}
+                </>
+              )}
+            </div>
           </motion.div>
         </>
       )}
