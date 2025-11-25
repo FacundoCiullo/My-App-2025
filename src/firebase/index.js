@@ -21,6 +21,9 @@ export const db = getFirestore(app);
 
 // Auth
 export const auth = getAuth(app);
+
+// Provider de Google con parámetros que EVITAN el cierre del popup
 export const googleProvider = new GoogleAuthProvider();
-
-
+googleProvider.setCustomParameters({
+  prompt: "select_account"
+});

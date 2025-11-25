@@ -21,7 +21,7 @@
   display: flex;
   flex-direction: column;
   border-radius: 0 20px 20px 0;
-  padding: 25px;
+  padding: 10px;
   overflow-y: auto; /* para poder scrollear los filtros si exceden la altura */
   box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
 }

@@ -165,3 +165,9 @@
   color: #ddd;
 }
 
+/* Ocultar en mobile */
+@media (max-width: 575.98px) {
+  .footer-container {
+    display: none !important;
+  }
+}
