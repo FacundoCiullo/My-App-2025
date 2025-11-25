@@ -11,7 +11,7 @@
 
 .mobile-filters-panel {
   position: fixed;
-  top: 4rem;
+  top: 2rem;
   left: 0;
   width: 60% !important; /* ancho del panel */
   height: fit-content;

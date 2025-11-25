@@ -59,6 +59,7 @@
 @media (max-width: 575.98px) {
   .pro-sidebar {
     padding: 0px;
+    border-radius: 0 20px 20px 0;
   }
   .form-range  {
   display: none;
@@ -68,6 +69,9 @@
   }
   .filter-title-Precio{
     display: none;
+  }
+  .hrr{
+      display: none;
   }
 }
 

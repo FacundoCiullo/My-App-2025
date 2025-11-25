@@ -178,7 +178,7 @@ const SidebarFilters = ({ productos, filtros, setFiltros }) => {
         )}
       </AnimatePresence>
 
-      <hr />
+      <hr className="hrr" />
 
       {/* Precio */}
       <h5 className="filter-title filter-title-Precio">Precio máximo: ${filtros.precioMax}</h5>
