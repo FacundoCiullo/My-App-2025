@@ -51,9 +51,20 @@ const Cart = () => {
           </div>
         </div>
 
-        <Link className="keep-buying-mobile" to="/Productos">
-          Seguir comprando
-        </Link>
+
+        <div className="mobile-cart-header">
+
+          <Link className="Next-mobile" to="/Productos">
+            Seguir comprando
+          </Link>
+
+          <button className="clear-mobile" onClick={clear}>
+            Vaciar Carrito
+          </button>
+
+        </div>
+
+
 
         {cart.map((item) => (
           <div
@@ -71,7 +82,7 @@ const Cart = () => {
                   className="remove-btn"
                   onClick={() => removeItem(item.id, item.color, item.talle)}
                 >
-                  ✕
+                  <span className="bi bi-trash3-fill"></span>
                 </button>
               </div>
 
@@ -94,33 +105,29 @@ const Cart = () => {
 
         {/* Price details */}
         <div className="price-details">
-          <h3>Price Details</h3>
 
           <div className="price-row">
-            <span>Total Product Price</span>
+            <span>Total Productos</span>
             <span>${sumTotal()}</span>
           </div>
 
           <div className="price-row">
-            <span>Total Discounts</span>
+            <span>Total Descuento</span>
             <span>$0</span>
           </div>
 
           <div className="price-row total">
-            <span>Order Total</span>
+            <span>Precio:</span>
             <span>${sumTotal()}</span>
           </div>
         </div>
 
 
-
         <button className="continue-btn" onClick={handleCheckout}>
-          Continue
+          Continuar
         </button>
 
-        <button className="clear-mobile" onClick={clear}>
-          Vaciar carrito
-        </button>
+
 
       </div>
 

@@ -1,5 +1,5 @@
 /* =========================================================
-   CONTENEDOR GENERAL
+  CONTENEDOR GENERAL
 ========================================================= */
 .cart-container {
   padding: 20px;
@@ -11,9 +11,10 @@
 ========================================================= */
 
 .mobile-cart-list {
+  min-height: 33rem;
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 8px;
 }
 
 /* ------------------- CARD ------------------- */
@@ -22,7 +23,13 @@
   background: #e3e3e384;
   border-radius: 15px;
   padding: 10px;
+  margin: 2px;
   box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-left {
+  display: flex;
+  align-items: center;
 }
 
 .card-left img {
@@ -117,26 +124,64 @@
 
 /* ------------------- BUTTONS ------------------- */
 
+.mobile-cart-header{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.Next-mobile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  height: 30px;
+  margin: 0px auto 0;
+  padding: 0px 15px;
+  color: #f7f7f7;
+  background: #388d49;
+  border: none;
+  border-radius: 10px;
+  text-decoration: none; /* Quita el subrayado */
+}
+
+.clear-mobile {
+  display: flex;
+  
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  height: 30px;
+  margin: 0px auto 0;
+  padding: 0px 15px;
+  color: #f7f7f7;
+  background: #972e2e;
+  border: none;
+  border-radius: 10px;
+}
+
+
 .continue-btn {
   display: block;
   width: 90%;
-  height: 50px;
+  height: 40px;
   margin: 0px auto 0;
   padding: 10px ;
   color: #f7f7f7;
-  background: #5f5f5f;
+  background: #388d49;
   border: none;
   border-radius: 10px;
 }
 
 .clear-mobile {
   display: block;
-  width: 50%;
+  width: 40%;
   height: 30px;
   margin: 0px auto 0;
   padding: 0px 15px;
   color: #f7f7f7;
-  background: #964242;
+  background: #972e2e;
   border: none;
   border-radius: 10px;
 }
@@ -148,6 +193,8 @@
   color: #444;
   text-decoration: underline;
 }
+
+
 
 /* =========================================================
   DESKTOP VERSION

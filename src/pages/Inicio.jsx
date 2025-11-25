@@ -7,7 +7,7 @@ import Testimonials from "../components/sections/Testimonials";
 import Button from "react-bootstrap/Button";
 import Destacados from "../components/sections/Destacados";
 import { motion } from "framer-motion";
-import Favorites from "../components/user/Favorites";
+import Favorites from "../components/user/FavoritesItems";
 import { useAuth } from "../context/AuthContext";
 import { BsBookmarkStarFill } from "react-icons/bs";
 

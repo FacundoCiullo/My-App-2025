@@ -1,3 +1,5 @@
+//src/components/items/SidebarFilters.jsx
+
 import { useEffect, useMemo, useRef } from "react";
 import "./style/sidebar.css";
 import { motion, AnimatePresence } from "framer-motion";
@@ -72,7 +74,7 @@ const SidebarFilters = ({ productos, filtros, setFiltros }) => {
   <div className="sticky-wrapper">
 
       {/* Categorías */}
-      <h5 className="filter-title">📂 Categorías</h5>
+      <h5 className="filter-title">Categorías</h5>
       <div className="filter-grid">
         {opciones.cats.map((cat) => (
           <button
@@ -92,10 +94,10 @@ const SidebarFilters = ({ productos, filtros, setFiltros }) => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3 }}
+            transition={{ duration: 0.1 }}
           >
             <hr />
-            <h5 className="filter-title">🏷️ Marcas</h5>
+            <h5 className="filter-title">Marcas</h5>
             <div className="filter-grid">
               {opciones.marcas.length > 0 ? (
                 opciones.marcas.map((m) => (
@@ -122,10 +124,10 @@ const SidebarFilters = ({ productos, filtros, setFiltros }) => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3 }}
+            transition={{ duration: 0.1 }}
           >
             <hr />
-            <h5 className="filter-title">🏷️ Talles</h5>
+            <h5 className="filter-title">Talles</h5>
             <div className="filter-grid">
               {opciones.talles.length > 0 ? (
                 opciones.talles.map((t) => (
@@ -152,10 +154,10 @@ const SidebarFilters = ({ productos, filtros, setFiltros }) => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3 }}
+            transition={{ duration: 0.1 }}
           >
             <hr />
-            <h5 className="filter-title">🏷️ Colores</h5>
+            <h5 className="filter-title">Colores</h5>
             <div className="filter-grid color-grid">
               {opciones.colores.length > 0 ? (
                 opciones.colores.map((c) => (
@@ -179,7 +181,7 @@ const SidebarFilters = ({ productos, filtros, setFiltros }) => {
       <hr />
 
       {/* Precio */}
-      <h5 className="filter-title">💲 Precio máximo: ${filtros.precioMax}</h5>
+      <h5 className="filter-title filter-title-Precio">Precio máximo: ${filtros.precioMax}</h5>
       <input
         type="range"
         min={0}

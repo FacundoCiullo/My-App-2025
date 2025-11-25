@@ -1,4 +1,5 @@
 // src/components/layout/NavBar.jsx
+import './style/layout.css';
 import { Navbar, Nav, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { BsBoxes } from "react-icons/bs";
@@ -6,12 +7,9 @@ import { FaUserCircle } from "react-icons/fa";
 import CartWidget from "../user/CartWidget";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from "../../firebase";
-
 import Sidebar from "./Sidebar";
-
-import './style/layout.css';
-
 import { useState } from "react";
+
 
 const NavBar = () => {
   const [user] = useAuthState(auth);
@@ -20,7 +18,7 @@ const NavBar = () => {
   return (
     <>
       <Navbar bg="dark" variant="dark" expand="lg" fixed="top" className="navbar-custom shadow-sm px-4 py-2">
-        <div className="d-flex align-items-center justify-content-between w-100">
+        <div className="d-flex align-items-center navbar-custom2 w-100">
 
           {/* Logo */}
           <Navbar.Brand as={Link} to="/" className="d-flex align-items-center">

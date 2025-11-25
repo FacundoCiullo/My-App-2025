@@ -7,6 +7,7 @@
   border: 1px solid #ececec;
 }
 
+
 /* Sticky */
 .sticky-sidebar {
   position: sticky;
@@ -54,6 +55,21 @@
   margin: 10px 0 16px;
 }
 
+
+@media (max-width: 575.98px) {
+  .pro-sidebar {
+    padding: 0px;
+  }
+  .form-range  {
+  display: none;
+  }
+  .btn-clear-filters{
+      display: none;
+  }
+  .filter-title-Precio{
+    display: none;
+  }
+}
 
 
 /* SideBar */
@@ -130,3 +146,5 @@
   top: 5rem; /* compensación por tu navbar */
   z-index: 10;
 }
+
+

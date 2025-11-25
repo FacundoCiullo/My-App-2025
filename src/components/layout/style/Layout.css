@@ -9,6 +9,12 @@
 .navbar-custom {
   letter-spacing: 1px;
   font-weight: 500;
+
+}
+
+.navbar-custom2{
+    display: flex;
+  justify-content: space-evenly;
 }
 
 .nav-underline {

@@ -1,3 +1,4 @@
+
 .iqv-container {
   display: flex;
   gap: 20px;
@@ -49,6 +50,7 @@
 
 .iqv-cantidad {
   display: flex;
+  width: fit-content;
   align-items: center;
   gap: 10px;
 }
@@ -71,12 +73,17 @@
   }
 
   .iqv-botones {
-    flex-direction: column;
+    flex-direction: row;
     width: 100%;
   }
 
-  .iqv-botones a,
-  .iqv-botones button {
-    width: 100%;
+  .iqv-descripcion {
+    margin-top: 0px;
+  }
+  .iqv-group {
+    margin-bottom: 2px;
+  }
+  .Quick-view{
+    padding-bottom: 3.5rem;
   }
 }

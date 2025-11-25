@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 
+
 import ItemQuickView from "./ItemQuickView";
 import Item from "./Item";
 

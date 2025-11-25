@@ -12,7 +12,9 @@ return (
   (cartTotal() > -1) ? 
     <Link to={"/cart"}>
       <Button className="btn btn-dark">
+        
         <i className="bi bi-cart3"></i><Badge bg="danger">{cartTotal()}</Badge>
+        
       </Button> 
     </Link> : ""
   ) 

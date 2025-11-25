@@ -75,7 +75,7 @@ const ItemQuickView = ({ show, handleClose, producto }) => {
 
   return (
     <>
-      <Modal show={show} onHide={handleClose} centered size="lg">
+      <Modal show={show} onHide={handleClose} centered size="lg" className="Quick-view">
         <Modal.Header closeButton>
           <Modal.Title>
             {producto.marca} {producto.titulo}

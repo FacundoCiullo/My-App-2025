@@ -3,13 +3,15 @@ import './style/App.css';
 import Inicio from './pages/Inicio';
 import Error404 from './pages/Error404';
 import ThankYou from './pages/ThankYou';
+import Productos from './pages/Productos';
+import Favorites from './pages/Favorites';
 
 import NavBar from './components/layout/NavBar';
 import Footer from './components/layout/Footer';
 
 import Cart from './components/user/Cart';
 import Checkout from './components/user/Checkout';
-import FavoritesList from './components/user/FavoritesList';
+
 import HistorialCompras from './components/user/HistorialCompras';
 
 import ItemListContainer from './components/items/ItemListContainer';
@@ -41,9 +43,9 @@ function App() {
                   <Route path="/admin" element={<AdminDashboard />} />
                   <Route path="/" element={<Inicio />} />
                   <Route path="/Home" element={<Inicio />} />
-                  <Route path="/Productos" element={<ItemListContainer />} />
+                  <Route path="/Productos" element={<Productos />} />
                   <Route path="/historial" element={<HistorialCompras />} />
-                  <Route path="/favoritos" element={<FavoritesList />} />
+                  <Route path="/favoritos" element={<Favorites />} />
                   <Route path="/category/:id" element={<ItemListContainer />} />
                   <Route path="/item/:id" element={<ItemDetailContainer />} />
                   <Route path="/cart" element={<Cart />} />

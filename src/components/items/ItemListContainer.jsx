@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import ItemList from "./ItemList";
 import SidebarFilters from "./SidebarFilters";
+import MobileFiltersBar from "./MobileFiltersBar";
+import MobileFiltersPanel from "./MobileFiltersPanel";
 import {
   getFirestore,
   collection,
@@ -25,6 +27,9 @@ const ItemListContainer = ({ limit }) => {
     colores: [],
     precioMax: 999999,
   });
+
+  // --- ESTADO PARA MOBILE ---
+  const [showMobileFilters, setShowMobileFilters] = useState(false);
 
   // --- CARGA DESDE FIRESTORE ---
   useEffect(() => {
@@ -73,16 +78,14 @@ const ItemListContainer = ({ limit }) => {
     let productosExpandidos = [];
 
     final.forEach((item) => {
-      // si no hay filtro de color → se usa el producto normal
       if (!filtros.colores.length) {
         productosExpandidos.push(item);
       } else {
-        // si hay colores filtrados → se duplica el producto por color
         filtros.colores.forEach((color) => {
           if (item.colores?.includes(color)) {
             productosExpandidos.push({
               ...item,
-              colorForzado: color, // ← clave para Item.jsx
+              colorForzado: color,
             });
           }
         });
@@ -98,8 +101,8 @@ const ItemListContainer = ({ limit }) => {
     <div className="container my-5">
       <div className="row">
 
-        {/* SIDEBAR */}
-        <div className="col-12 col-md-3 mb-4">
+        {/* SIDEBAR DESKTOP */}
+        <div className="col-12 col-md-3 mb-4 d-none d-md-block">
           <SidebarFilters
             productos={items}
             filtros={filtros}
@@ -107,8 +110,25 @@ const ItemListContainer = ({ limit }) => {
           />
         </div>
 
+        {/* MOBILE FILTER BAR */}
+        <div className="col-12 d-block d-md-none mb-3">
+          <MobileFiltersBar onOpenFilters={() => setShowMobileFilters(true)} />
+        </div>
+
+        {/* MOBILE FILTER PANEL */}
+        <MobileFiltersPanel
+          show={showMobileFilters}
+          onClose={() => setShowMobileFilters(false)}
+        >
+          <SidebarFilters
+            productos={items}
+            filtros={filtros}
+            setFiltros={setFiltros}
+          />
+        </MobileFiltersPanel>
+
         {/* LISTA DE PRODUCTOS */}
-        <div className="col-12 col-md-8">
+        <div className="col-12 col-md-9">
           <ItemList productos={filtered} />
         </div>
       </div>
