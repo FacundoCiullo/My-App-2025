@@ -147,8 +147,8 @@
 
 /* Botón de actualizar productos (admin) */
 .update-btn {
-  margin-top: 3rem;
-    padding: 5px 20px;
+  margin-top: 0.5rem;
+  padding: 5px 20px;
   border-radius: 50px;
   background: #22222283;
   color: #fff;

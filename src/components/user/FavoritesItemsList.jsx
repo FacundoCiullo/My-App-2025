@@ -35,7 +35,7 @@ const FavoritesList = () => {
 
   return (
     <>
-      <h2 className="text-center my-4 fw-bold">Favoritos</h2>
+      <h2 className="text-center my-4 fw-bold"> </h2>
 
       <motion.div
         className="items-container"

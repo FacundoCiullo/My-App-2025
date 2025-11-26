@@ -1,16 +1,13 @@
 /* =========================================================
   CONTENEDOR GENERAL
 ========================================================= */
-.cart-container {
-  padding: 20px;
-}
-
 /* =========================================================
   MOBILE VERSION (DEFAULT)
   Las tarjetas y el price box solo aparecen en mobile
 ========================================================= */
 
 .mobile-cart-list {
+  padding-top: 2rem;
   min-height: 33rem;
   display: flex;
   flex-direction: column;
@@ -23,7 +20,7 @@
   background: #e3e3e384;
   border-radius: 15px;
   padding: 10px;
-  margin: 2px;
+  margin: 0px;
   box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
 }
 

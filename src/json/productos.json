@@ -280,10 +280,9 @@
     "precio": 20000,
     "stock": 10,
     "talles": ["38","40","42","44"],
-    "colores": ["Original","Alternativo"],
+    "colores": ["Original"],
     "imagenesPorColor": {
-      "Original": ["/img/zapatillas/02.jpg"],
-      "Alternativo": ["/img/zapatillas/02-alt.jpg"]
+      "Original": ["/img/zapatillas/02.jpg"]
     }
   },
   {
@@ -296,10 +295,10 @@
     "precio": 20000,
     "stock": 10,
     "talles": ["38","40","42","44"],
-    "colores": ["Original","Alternativo"],
+    "colores": ["Original","Otro"],
     "imagenesPorColor": {
       "Original": ["/img/zapatillas/01-negro.webp"],
-      "Alternativo": ["/img/zapatillas/01-verde.webp"]
+      "Otro": ["/img/zapatillas/01-verde.webp"]
     }
   },
   {

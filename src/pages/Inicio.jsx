@@ -23,8 +23,10 @@ const Inicio = () => {
 
   return (
     <div className="inicio-landing">
+
+      <h1 className="fw-bold mb-3 text-center my-4" >Bienvenido a <span className="highlight text-center">App Store Demo</span></h1>
       {/* 🔹 Hero principal con carrusel */}
-      <section className="inicio-carousel mt-5">
+      <section className="inicio-carousel mt-2">
         <Carousel fade interval={4000} pause="hover" indicators={false} controls>
           {cardsData.map((card, index) => (
             <Carousel.Item key={index}>
@@ -68,17 +70,15 @@ const Inicio = () => {
 
       {/* 🔹 Sección de bienvenida */}
       <motion.section
-        className="text-center my-5 container"
+        className="text-center my-2 container"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
-        <h1 className="fw-bold mb-3">Bienvenido a <span className="highlight">App Store Demo</span></h1>
-        <p className="text-muted fs-5">
-          Descubrí la mejor moda urbana con envío rápido, calidad premium y atención personalizada.
-        </p>
+        
+
         <Link to="/Productos">
-          <Button variant="dark" size="lg" className="mt-3 shadow-sm">
+          <Button variant="dark" size="ml" className="mt-3 shadow-sm">
             Explorar productos
           </Button>
         </Link>
@@ -86,19 +86,19 @@ const Inicio = () => {
 
       {/* 🔹 Sección de productos destacados */}
       <motion.section
-        className="my-5 container"
+        className="my-4 container"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
-        <h2 className="text-center mb-4 fw-bold">Productos destacados</h2>
+        <h3 className="text-center fw-bold">Destacados</h3>
         <Destacados limit={8} />
       </motion.section>
 
       {/* 🔹 Sección de productos Favoritos solo si hay usuario logueado */}
       {!loading && usuario && (
         <motion.section
-          className="my-5 container"
+          className="my-4 container"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}

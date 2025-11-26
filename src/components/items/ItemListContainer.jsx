@@ -98,7 +98,7 @@ const ItemListContainer = ({ limit }) => {
   if (loading) return <Loading />;
 
   return (
-    <div className="container my-5">
+    <div className="container my-1">
       <div className="row">
 
         {/* SIDEBAR DESKTOP */}

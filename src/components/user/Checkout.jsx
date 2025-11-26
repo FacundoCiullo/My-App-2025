@@ -8,20 +8,44 @@ import { Navigate } from "react-router-dom";
 
 const Checkout = () => {
   const { cart, clear, sumTotal } = useContext(CartContext);
-  const { usuario } = useAuth();
+  const { user } = useAuth();
 
   const [nombre, setNombre] = useState("");
   const [email, setEmail] = useState("");
   const [telefono, setTelefono] = useState("");
+  const [telefonoError, setTelefonoError] = useState("");
   const [orderId, setOrderId] = useState("");
 
+  // Precarga datos del usuario logueado
   useEffect(() => {
-    if (usuario) {
-      setNombre(usuario.displayName || "");
-      setEmail(usuario.email || "");
-      setTelefono(usuario.phoneNumber || "");
+    if (user) {
+      setNombre(user.displayName || "");
+      setEmail(user.email || "");
+      setTelefono(user.phoneNumber || "");
     }
-  }, [usuario]);
+  }, [user]);
+
+  // --- VALIDACIÓN DE TELÉFONO ARGENTINO ---
+  const validarTelefono = (value) => {
+    // Solo números
+    const soloNumeros = value.replace(/\D/g, "");
+
+    setTelefono(soloNumeros);
+
+    // No validar si está vacío (que se valide al enviar)
+    if (soloNumeros.length === 0) {
+      setTelefonoError("");
+      return;
+    }
+
+    // Debe tener 10 u 11 dígitos aprox. según formato sin 0 ni 15 (11 es lo más común)
+    if (soloNumeros.length !== 10 && soloNumeros.length !== 11) {
+      setTelefonoError("El teléfono debe tener 10 u 11 dígitos (sin 0 ni 15).");
+      return;
+    }
+
+    setTelefonoError("");
+  };
 
   const generarOrden = () => {
     if (!nombre || !email || !telefono) {
@@ -29,9 +53,13 @@ const Checkout = () => {
       return;
     }
 
+    if (telefonoError) {
+      alert("El teléfono no es válido.");
+      return;
+    }
+
     const buyer = { name: nombre, phone: telefono, email };
 
-    // Guardamos exactamente las propiedades que queremos en la orden
     const items = cart.map((item) => ({
       id: item.id,
       title: item.titulo,
@@ -85,14 +113,22 @@ const Checkout = () => {
               <label className="form-label">Teléfono</label>
               <input
                 type="text"
-                className="form-control"
+                className={`form-control ${telefonoError ? "is-invalid" : ""}`}
                 value={telefono}
-                onChange={(e) => setTelefono(e.target.value)}
-                placeholder="Ingresá tu teléfono"
+                onChange={(e) => validarTelefono(e.target.value)}
+                placeholder="Ej: 1155334455"
               />
+              {telefonoError && (
+                <div className="invalid-feedback">{telefonoError}</div>
+              )}
             </div>
 
-            <button type="button" className="btn btn-dark" onClick={generarOrden}>
+            <button
+              type="button"
+              className="btn btn-dark"
+              onClick={generarOrden}
+              disabled={Boolean(telefonoError)}
+            >
               Generar Orden
             </button>
           </form>

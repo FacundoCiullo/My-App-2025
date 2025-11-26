@@ -32,7 +32,7 @@ const MobileSidebar = ({ showSidebar, setShowSidebar, user }) => {
 
   const handleActualizarProductos = async () => {
     try {
-      const productosRef = collection(db, "productos");
+      const productosRef = collection(db, "items");
       for (const producto of productos) {
         await setDoc(doc(productosRef, String(producto.id)), producto);
       }

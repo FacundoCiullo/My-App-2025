@@ -1,20 +1,20 @@
-/* src/components/items/style/mobileNavbar.css */
+/* src/components/items/style/mobilefiltersbar.css */
 
 .mobile-navbar {
   position: fixed;
-  top: 0;
+  top: 4rem;
   left: 0;
   z-index: 90;
-  width: 100%;
-  height: 55px;
-  background: #fff;
+  width: 12%;
+  height: auto;
+  background: #ffd876;
   border-bottom: 1px solid #e5e5e5;
-  border-radius: 0 0 20px 20px  ;
-  box-shadow: 0 4px 20px 4px rgba(3, 3, 3, 0.226);
+  border-radius: 0 20px 20px 0 ;
+  box-shadow: 0 4px 10px 4px rgba(3, 3, 3, 0.226);
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 0 15px;
+  padding: 0px;
 }
 
 .btn-no-style {
@@ -25,5 +25,5 @@
 
 .mobile-title {
   font-weight: 600;
-  font-size: 16px;
+  font-size: 24px;
 }

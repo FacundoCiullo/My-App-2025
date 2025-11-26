@@ -183,12 +183,14 @@ const ItemQuickView = ({ show, handleClose, producto }) => {
 
               {/* BOTONES */}
               <div className="iqv-botones">
-                <Button variant="dark" onClick={handleAgregarCarrito}>
+                <Button 
+                  className="btn btn-dark"
+                  onClick={handleAgregarCarrito}>
                   🛒 Agregar al carrito
                 </Button>
                 <Link
                   to={`/item/${producto.id}`}
-                  className="btn btn-outline-primary"
+                  className="btn2 btn-outline-primary"
                   onClick={handleClose}
                 >
                   Ver detalles

@@ -125,6 +125,7 @@
 /* Media query para mobile: siempre 2 columnas */
 @media (max-width: 575.98px) {
   .items-container {
+    margin-top: 1rem;
     gap: 6px;
     grid-template-columns: repeat(2, 1fr);
   }
