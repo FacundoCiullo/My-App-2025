@@ -105,11 +105,16 @@
 }
 
 /* Contenedor general de items */
+.container{
+  margin-top: 3rem;
+}
+
 .items-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
   gap: 16px;
   justify-items: center;
+  
 }
 
 /* Wrapper individual de cada item (motion.div) */
@@ -124,8 +129,12 @@
 
 /* Media query para mobile: siempre 2 columnas */
 @media (max-width: 575.98px) {
+  .container{
+  margin-top: 1rem;
+}
   .items-container {
     margin-top: 1rem;
+    margin-bottom: 2rem;
     gap: 6px;
     grid-template-columns: repeat(2, 1fr);
   }
